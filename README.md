@@ -1,2 +1,2 @@
 # intro_to_data_sci
-Intro t
+Intro to data science coursework
