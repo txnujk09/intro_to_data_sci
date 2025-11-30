@@ -1,0 +1,92 @@
+---
+title: "SDG 8 Analysis"
+author: "Group X"
+output: pdf_document
+---
+
+# Introduction
+Write a short paragraph summarising SDG 8 and describe that this project analyses GDP per capita growth (Target 8.1) and youth NEET rates (Target 8.6).
+
+# Data Loading and Preparation
+(Here we will load: continents-according-to-our-world-in-data.csv,
+ gdp-per-capita-worldbank.csv,
+ youth-not-in-education-employment-training.csv,
+ plus one extra dataset for additional insight.)
+
+```{r setup, message=FALSE}
+library(tidyverse)
+library(readr)
+
+gdp_clean <- read_rds("../data/gdp_clean.rds")
+neet_clean <- read_rds("../data/neet_clean.rds")
+continents_clean <- read_rds("../data/continents_clean.rds")
+ldc_clean <- read_rds("../data/ldc_clean.rds")
+ldc_raw <- read_csv("../data/ldc_list.csv", show_col_types = FALSE)
+
+source("../src/analysis_functions.R")
+
+merged_df <- merge_all_data(gdp_clean, neet_clean, continents_clean, ldc_clean)
+
+gdp_growth <- compute_gdp_growth(merged_df)
+neet_changes <- compute_neet_changes(merged_df)
+```
+
+# Target 1 Analysis — GDP per Capita Growth
+(We will compute yearly growth % for each country, especially LDCs.)
+
+```{r gdp-growth-by-continent, echo=FALSE}
+gdp_growth %>%
+  filter(!is.na(gdp_growth), !is.na(continent)) %>%
+  group_by(continent, year) %>%
+  summarise(avg_growth = mean(gdp_growth, na.rm = TRUE), .groups = "drop") %>%
+  ggplot(aes(x = year, y = avg_growth, color = continent)) +
+  geom_line(linewidth = 1) +
+  labs(
+    title = "Average GDP per Capita Growth by Continent",
+    x = "Year",
+    y = "Growth Rate (%)",
+    color = "Continent"
+  ) +
+  theme_minimal()
+```
+
+```{r ldc-share-growth, echo=FALSE}
+gdp_growth %>%
+  filter(is_ldc, !is.na(gdp_growth)) %>%
+  group_by(year) %>%
+  summarise(ldc_share_ge7 = mean(gdp_growth >= 7, na.rm = TRUE), .groups = "drop") %>%
+  ggplot(aes(x = year, y = ldc_share_ge7)) +
+  geom_line(linewidth = 1, color = "#0072B2") +
+  scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +
+  labs(
+    title = "Share of LDCs Achieving ≥7% GDP per Capita Growth",
+    x = "Year",
+    y = "Share of LDCs"
+  ) +
+  theme_minimal()
+```
+
+# Target 2 Analysis — Youth NEET
+(We will compute changes in NEET % and compare continents.)
+
+```{r neet-by-continent, echo=FALSE}
+merged_df %>%
+  filter(!is.na(neet_rate), !is.na(continent)) %>%
+  group_by(continent, year) %>%
+  summarise(avg_neet = mean(neet_rate, na.rm = TRUE), .groups = "drop") %>%
+  ggplot(aes(x = year, y = avg_neet, color = continent)) +
+  geom_line(linewidth = 1) +
+  labs(
+    title = "Average Youth NEET Rate by Continent",
+    x = "Year",
+    y = "NEET Rate (%)",
+    color = "Continent"
+  ) +
+  theme_minimal()
+```
+
+# Extra Dataset Integration
+(We will merge the additional dataset and discuss its relevance.)
+
+# Conclusion
+(We will summarise findings and limitations.)
