@@ -1,0 +1,27 @@
+library(readr)
+library(dplyr)
+library(ggplot2)
+
+# Load the merged dataset (NEET + continents + HDI)
+df <- readr::read_csv("youth_continents_hdi_2000_2020.csv")
+
+# If your NEET column is not already called 'share_neet', rename it:
+# df <- df %>%
+#   rename(share_neet = `Share of youth not in education, employment or training, total (% of youth population)`)
+africa <- df %>%
+  filter(Continent == "Africa") %>%
+  group_by(Year) %>%
+  summarise(
+    mean_neet = mean(share_neet, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+ggplot(africa, aes(x = Year, y = mean_neet)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.3) +
+  labs(
+    title = "Africa: Youth NEET (%)",
+    x = "Year",
+    y = "% of youth NEET"
+  ) +
+  theme_minimal()
