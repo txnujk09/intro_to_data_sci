@@ -1,0 +1,91 @@
+---
+title: "Youth Not in Education, Employment or Training (NEET) – Heatmap by Continent"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Loading Required Libraries
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(dplyr)
+```
+
+# Setting Working Directory
+
+```{r}
+setwd("~/Desktop/IC academic/Data Science/data sets")
+```
+
+# Reading the Data
+
+```{r}
+continents <- read.csv("continents-according-to-our-world-in-data.csv",
+                       stringsAsFactors = FALSE)
+
+youth <- read.csv("youth-not-in-education-employment-training.csv",
+                  stringsAsFactors = FALSE)
+```
+
+# Selecting Relevant Columns
+
+```{r}
+continents <- continents %>% 
+  select("Entity", "Code", "Continent")
+```
+
+# Joining Youth Data With Continent Classification
+
+```{r}
+all <- youth %>% 
+  left_join(continents, by = "Entity")
+```
+
+# Removing Duplicate/Unnecessary Columns
+
+```{r}
+all <- all %>% 
+  select("Entity", "Code.x", "Year", "Continent",
+         "Share.of.youth.not.in.education..employment.or.training..total....of.youth.population.")
+```
+
+# Removing Missing Values
+
+```{r}
+all <- all %>% na.omit()
+```
+
+# Filtering Years 2000–2020
+
+```{r}
+all <- all %>% 
+  filter(Year >= 2000 & Year <= 2020)
+```
+
+# Grouping by Continent and Year, Computing Averages
+
+```{r}
+by_continent <- all %>%
+  group_by(Continent, Year) %>%
+  summarise(continent_avg = mean(
+    Share.of.youth.not.in.education..employment.or.training..total....of.youth.population.
+  ))
+```
+
+# Heatmap Plot
+
+```{r}
+by_continent %>% 
+  ggplot(aes(x = Year, y = Continent, fill = continent_avg)) +
+  geom_tile() +
+  scale_fill_gradient(low = "green", high = "red") +
+  labs(
+    title = "Youth Not in Employment, Training or Education (NEET) by Continent, 2000–2020",
+    fill = "Average NEET Share (%)"
+  ) +
+  theme(legend.position = "bottom")
+```
