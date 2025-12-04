@@ -1,0 +1,1612 @@
+Entity,Code,Year,share_neet,Continent,HDI
+Afghanistan,AFG,2014,35.06,Asia,0.497
+Afghanistan,AFG,2017,42.84,Asia,0.496
+Afghanistan,AFG,2020,53.76,Asia,0.501
+Albania,ALB,2002,41.8,Europe,0.697
+Albania,ALB,2005,35.19,Europe,0.723
+Albania,ALB,2007,33.77,Europe,0.742
+Albania,ALB,2008,28.17,Europe,0.749
+Albania,ALB,2009,30.73,Europe,0.756
+Albania,ALB,2010,29.72,Europe,0.769
+Albania,ALB,2011,30.01,Europe,0.781
+Albania,ALB,2012,27.65,Europe,0.79
+Albania,ALB,2013,30.98,Europe,0.793
+Albania,ALB,2014,31.39,Europe,0.797
+Albania,ALB,2015,29.82,Europe,0.797
+Albania,ALB,2016,27.39,Europe,0.797
+Albania,ALB,2017,26.23,Europe,0.798
+Albania,ALB,2018,26.61,Europe,0.801
+Albania,ALB,2019,25.82,Europe,0.805
+Algeria,DZA,2009,25.45,Africa,0.714
+Algeria,DZA,2010,24.53,Africa,0.718
+Algeria,DZA,2011,26,Africa,0.718
+Algeria,DZA,2012,22.7,Africa,0.723
+Algeria,DZA,2013,21.5,Africa,0.727
+Algeria,DZA,2014,22.8,Africa,0.732
+Algeria,DZA,2015,21.2,Africa,0.737
+Algeria,DZA,2017,20.95,Africa,0.746
+Angola,AGO,2004,30.96,Africa,0.448
+Angola,AGO,2009,25.81,Africa,0.517
+Angola,AGO,2011,10.01,Africa,0.545
+Angola,AGO,2014,30.62,Africa,0.577
+Angola,AGO,2019,23.06,Africa,0.611
+Argentina,ARG,2004,20.98,South America,0.808
+Argentina,ARG,2005,19.87,South America,0.812
+Argentina,ARG,2006,19.51,South America,0.822
+Argentina,ARG,2008,19.42,South America,0.833
+Argentina,ARG,2009,20.04,South America,0.835
+Argentina,ARG,2010,19.46,South America,0.844
+Argentina,ARG,2011,18.4,South America,0.852
+Argentina,ARG,2012,18.41,South America,0.85
+Argentina,ARG,2013,19.07,South America,0.852
+Argentina,ARG,2014,19.67,South America,0.855
+Argentina,ARG,2017,19.25,South America,0.861
+Argentina,ARG,2018,19.02,South America,0.861
+Argentina,ARG,2019,19.23,South America,0.861
+Argentina,ARG,2020,22.33,South America,0.851
+Armenia,ARM,2009,40.52,Asia,0.741
+Armenia,ARM,2011,44.6,Asia,0.752
+Armenia,ARM,2012,36.77,Asia,0.761
+Armenia,ARM,2013,44.37,Asia,0.766
+Armenia,ARM,2014,38.03,Asia,0.772
+Armenia,ARM,2015,35.56,Asia,0.777
+Armenia,ARM,2016,36.58,Asia,0.783
+Armenia,ARM,2017,36.59,Asia,0.785
+Armenia,ARM,2018,29.52,Asia,0.789
+Armenia,ARM,2019,26.04,Asia,0.796
+Armenia,ARM,2020,26.08,Asia,0.761
+Aruba,ABW,2010,16.56,North America,NA
+Australia,AUS,2009,11.4,Oceania,0.927
+Australia,AUS,2010,11.32,Oceania,0.929
+Australia,AUS,2011,10.59,Oceania,0.933
+Australia,AUS,2012,9.91,Oceania,0.938
+Australia,AUS,2013,11.02,Oceania,0.935
+Australia,AUS,2014,10.09,Oceania,0.937
+Australia,AUS,2015,9.8,Oceania,0.938
+Australia,AUS,2016,8.69,Oceania,0.939
+Australia,AUS,2017,8.94,Oceania,0.94
+Austria,AUT,2004,9.64,Europe,0.895
+Austria,AUT,2005,11.84,Europe,0.898
+Austria,AUT,2006,11.22,Europe,0.902
+Austria,AUT,2007,10.71,Europe,0.905
+Austria,AUT,2008,10.37,Europe,0.907
+Austria,AUT,2009,11.73,Europe,0.907
+Austria,AUT,2010,10.79,Europe,0.912
+Austria,AUT,2011,10.56,Europe,0.915
+Austria,AUT,2012,10.16,Europe,0.916
+Austria,AUT,2013,10.34,Europe,0.915
+Austria,AUT,2014,10.76,Europe,0.919
+Austria,AUT,2015,11.04,Europe,0.919
+Austria,AUT,2016,10.91,Europe,0.921
+Austria,AUT,2017,10.45,Europe,0.922
+Austria,AUT,2018,10.42,Europe,0.925
+Austria,AUT,2019,11.01,Europe,0.928
+Austria,AUT,2020,11.42,Europe,0.925
+Azerbaijan,AZE,2009,9.4,Asia,0.74
+Azerbaijan,AZE,2010,9.64,Asia,0.744
+Bangladesh,BGD,2005,30.99,Asia,0.52
+Bangladesh,BGD,2006,32.26,Asia,0.527
+Bangladesh,BGD,2010,30.06,Asia,0.561
+Bangladesh,BGD,2013,32.04,Asia,0.589
+Bangladesh,BGD,2016,28.88,Asia,0.632
+Bangladesh,BGD,2017,27.39,Asia,0.633
+Barbados,BRB,2016,28.99,North America,0.803
+Belarus,BLR,2009,12.08,Europe,0.798
+Belarus,BLR,2016,0.48,Europe,0.825
+Belarus,BLR,2017,0.38,Europe,0.828
+Belarus,BLR,2018,0.54,Europe,0.827
+Belarus,BLR,2019,9.25,Europe,0.826
+Belarus,BLR,2020,9.18,Europe,0.815
+Belgium,BEL,2004,8.55,Europe,0.909
+Belgium,BEL,2005,13.02,Europe,0.911
+Belgium,BEL,2006,11.24,Europe,0.913
+Belgium,BEL,2007,11.16,Europe,0.916
+Belgium,BEL,2008,10.14,Europe,0.917
+Belgium,BEL,2009,11.08,Europe,0.919
+Belgium,BEL,2010,10.86,Europe,0.921
+Belgium,BEL,2011,11.81,Europe,0.923
+Belgium,BEL,2012,12.35,Europe,0.923
+Belgium,BEL,2013,12.68,Europe,0.925
+Belgium,BEL,2014,12.05,Europe,0.93
+Belgium,BEL,2015,12.18,Europe,0.933
+Belgium,BEL,2016,9.89,Europe,0.936
+Belgium,BEL,2017,9.32,Europe,0.94
+Belgium,BEL,2018,9.15,Europe,0.942
+Belgium,BEL,2019,9.25,Europe,0.945
+Belgium,BEL,2020,9.21,Europe,0.939
+Belize,BLZ,2012,11.95,North America,0.727
+Belize,BLZ,2013,27.93,North America,0.724
+Belize,BLZ,2014,27.79,North America,0.721
+Belize,BLZ,2015,27.68,North America,0.721
+Belize,BLZ,2016,27.38,North America,0.727
+Belize,BLZ,2017,27.38,North America,0.722
+Belize,BLZ,2019,24.88,North America,0.725
+Benin,BEN,2011,17.23,Africa,0.49
+Benin,BEN,2018,35.1,Africa,0.507
+Bermuda,BMU,2010,6.79,North America,NA
+Bhutan,BTN,2018,15.19,Asia,0.667
+Bhutan,BTN,2019,10.41,Asia,0.68
+Bhutan,BTN,2020,11.97,Asia,0.688
+Bolivia,BOL,2000,14.37,South America,0.63
+Bolivia,BOL,2001,22.93,South America,0.639
+Bolivia,BOL,2002,21.38,South America,0.642
+Bolivia,BOL,2004,13.08,South America,0.648
+Bolivia,BOL,2005,12.08,South America,0.658
+Bolivia,BOL,2006,10.79,South America,0.656
+Bolivia,BOL,2007,11.02,South America,0.664
+Bolivia,BOL,2008,9.69,South America,0.668
+Bolivia,BOL,2009,9.18,South America,0.671
+Bolivia,BOL,2011,10.85,South America,0.683
+Bolivia,BOL,2012,10.41,South America,0.685
+Bolivia,BOL,2013,10.45,South America,0.699
+Bolivia,BOL,2014,11.16,South America,0.701
+Bolivia,BOL,2015,14.56,South America,0.704
+Bolivia,BOL,2016,10.79,South America,0.714
+Bolivia,BOL,2017,11.58,South America,0.715
+Bolivia,BOL,2018,10.83,South America,0.722
+Bolivia,BOL,2019,10.24,South America,0.728
+Bolivia,BOL,2020,13.7,South America,0.697
+Bosnia and Herzegovina,BIH,2001,32.45,Europe,0.677
+Bosnia and Herzegovina,BIH,2006,35.49,Europe,0.701
+Bosnia and Herzegovina,BIH,2007,32.36,Europe,0.709
+Bosnia and Herzegovina,BIH,2008,27.37,Europe,0.719
+Bosnia and Herzegovina,BIH,2009,26.63,Europe,0.722
+Bosnia and Herzegovina,BIH,2010,28.73,Europe,0.725
+Bosnia and Herzegovina,BIH,2011,28.3,Europe,0.731
+Bosnia and Herzegovina,BIH,2012,28.92,Europe,0.742
+Bosnia and Herzegovina,BIH,2013,26.63,Europe,0.756
+Bosnia and Herzegovina,BIH,2014,27.1,Europe,0.765
+Bosnia and Herzegovina,BIH,2015,28.35,Europe,0.769
+Bosnia and Herzegovina,BIH,2016,27.09,Europe,0.776
+Bosnia and Herzegovina,BIH,2017,25.51,Europe,0.78
+Bosnia and Herzegovina,BIH,2018,22.61,Europe,0.785
+Bosnia and Herzegovina,BIH,2019,22.6,Europe,0.788
+Bosnia and Herzegovina,BIH,2020,21.81,Europe,0.783
+Botswana,BWA,2006,42.34,Africa,0.627
+Botswana,BWA,2009,35.67,Africa,0.644
+Botswana,BWA,2019,31.98,Africa,0.718
+Botswana,BWA,2020,37.14,Africa,0.718
+Brazil,BRA,2001,19.65,South America,0.694
+Brazil,BRA,2002,19.24,South America,0.7
+Brazil,BRA,2003,19.28,South America,0.705
+Brazil,BRA,2004,18.99,South America,0.712
+Brazil,BRA,2005,19.07,South America,0.718
+Brazil,BRA,2006,19.24,South America,0.725
+Brazil,BRA,2007,19.18,South America,0.732
+Brazil,BRA,2008,18.32,South America,0.739
+Brazil,BRA,2009,18.79,South America,0.742
+Brazil,BRA,2011,19.4,South America,0.753
+Brazil,BRA,2012,20.54,South America,0.758
+Brazil,BRA,2013,20.9,South America,0.762
+Brazil,BRA,2014,20.69,South America,0.765
+Brazil,BRA,2015,22.1,South America,0.764
+Brazil,BRA,2016,23.8,South America,0.765
+Brazil,BRA,2017,24.87,South America,0.77
+Brazil,BRA,2018,24.6,South America,0.774
+Brazil,BRA,2019,23.99,South America,0.776
+Brazil,BRA,2020,25.99,South America,0.77
+Brunei,BRN,2014,17.11,Asia,0.841
+Brunei,BRN,2017,19.97,Asia,0.837
+Brunei,BRN,2018,20.72,Asia,0.837
+Brunei,BRN,2019,20.09,Asia,0.835
+Brunei,BRN,2020,21.43,Asia,0.836
+Bulgaria,BGR,2003,28.29,Europe,0.762
+Bulgaria,BGR,2004,24.37,Europe,0.769
+Bulgaria,BGR,2005,25.05,Europe,0.775
+Bulgaria,BGR,2006,22.24,Europe,0.779
+Bulgaria,BGR,2007,19.14,Europe,0.785
+Bulgaria,BGR,2008,17.4,Europe,0.791
+Bulgaria,BGR,2009,19.45,Europe,0.793
+Bulgaria,BGR,2010,21.03,Europe,0.799
+Bulgaria,BGR,2011,21.81,Europe,0.803
+Bulgaria,BGR,2012,21.53,Europe,0.807
+Bulgaria,BGR,2013,21.6,Europe,0.815
+Bulgaria,BGR,2014,20.24,Europe,0.819
+Bulgaria,BGR,2015,19.28,Europe,0.824
+Bulgaria,BGR,2016,18.2,Europe,0.827
+Bulgaria,BGR,2017,15.31,Europe,0.829
+Bulgaria,BGR,2018,15.04,Europe,0.832
+Bulgaria,BGR,2019,13.72,Europe,0.835
+Bulgaria,BGR,2020,14.44,Europe,0.826
+Burkina Faso,BFA,2018,41,Africa,0.449
+Burundi,BDI,2006,11.3,Africa,0.376
+Burundi,BDI,2014,5.07,Africa,0.431
+Burundi,BDI,2017,6.19,Africa,0.434
+Burundi,BDI,2020,11.17,Africa,0.435
+Cambodia,KHM,2000,10.34,Asia,0.438
+Cambodia,KHM,2001,6.13,Asia,0.453
+Cambodia,KHM,2003,10.32,Asia,0.488
+Cambodia,KHM,2007,8.05,Asia,0.534
+Cambodia,KHM,2008,8.63,Asia,0.539
+Cambodia,KHM,2009,7.13,Asia,0.539
+Cambodia,KHM,2010,5.31,Asia,0.543
+Cambodia,KHM,2011,5.1,Asia,0.547
+Cambodia,KHM,2012,12.72,Asia,0.551
+Cambodia,KHM,2013,6.34,Asia,0.554
+Cambodia,KHM,2014,6.32,Asia,0.557
+Cambodia,KHM,2015,6.59,Asia,0.562
+Cambodia,KHM,2016,6.41,Asia,0.57
+Cambodia,KHM,2017,6.46,Asia,0.578
+Cambodia,KHM,2019,11.38,Asia,0.593
+Cameroon,CMR,2007,11.12,Africa,0.485
+Cameroon,CMR,2010,10.79,Africa,0.529
+Cameroon,CMR,2014,17.01,Africa,0.566
+Canada,CAN,2000,13.9,North America,0.894
+Canada,CAN,2001,13.33,North America,0.897
+Canada,CAN,2002,13.22,North America,0.899
+Canada,CAN,2003,13.19,North America,0.902
+Canada,CAN,2004,13.09,North America,0.906
+Canada,CAN,2005,12.78,North America,0.909
+Canada,CAN,2006,12.37,North America,0.913
+Canada,CAN,2007,12.32,North America,0.914
+Canada,CAN,2008,12.74,North America,0.916
+Canada,CAN,2009,14.36,North America,0.915
+Canada,CAN,2010,14.1,North America,0.918
+Canada,CAN,2011,13.62,North America,0.921
+Canada,CAN,2012,13.79,North America,0.927
+Canada,CAN,2013,13.48,North America,0.93
+Canada,CAN,2014,13.9,North America,0.932
+Canada,CAN,2015,13.82,North America,0.932
+Canada,CAN,2016,13.5,North America,0.933
+Canada,CAN,2017,12.58,North America,0.935
+Canada,CAN,2018,12.84,North America,0.935
+Canada,CAN,2019,12.36,North America,0.937
+Canada,CAN,2020,17.93,North America,0.931
+Cape Verde,CPV,2017,31.4,Africa,0.663
+Cape Verde,CPV,2018,30.25,Africa,0.663
+Cape Verde,CPV,2019,27.99,Africa,0.667
+Chad,TCD,2018,37.05,Africa,0.402
+Chile,CHL,2000,24.03,South America,0.771
+Chile,CHL,2003,20.54,South America,0.789
+Chile,CHL,2006,19.89,South America,0.804
+Chile,CHL,2009,23.2,South America,0.819
+Chile,CHL,2010,19.16,South America,0.823
+Chile,CHL,2011,19.17,South America,0.823
+Chile,CHL,2012,17.86,South America,0.832
+Chile,CHL,2013,18.31,South America,0.845
+Chile,CHL,2014,18.63,South America,0.849
+Chile,CHL,2015,19.15,South America,0.855
+Chile,CHL,2016,17.1,South America,0.859
+Chile,CHL,2017,16.52,South America,0.862
+Chile,CHL,2018,15.82,South America,0.866
+Chile,CHL,2019,16.5,South America,0.867
+Chile,CHL,2020,20.52,South America,0.856
+Colombia,COL,2002,29.94,South America,0.684
+Colombia,COL,2003,28.09,South America,0.691
+Colombia,COL,2004,28.74,South America,0.699
+Colombia,COL,2005,27.72,South America,0.711
+Colombia,COL,2007,26.69,South America,0.724
+Colombia,COL,2008,25.54,South America,0.731
+Colombia,COL,2009,24.96,South America,0.736
+Colombia,COL,2010,23.44,South America,0.741
+Colombia,COL,2011,23.03,South America,0.747
+Colombia,COL,2012,22.53,South America,0.748
+Colombia,COL,2013,22.08,South America,0.76
+Colombia,COL,2014,21.4,South America,0.763
+Colombia,COL,2015,21.14,South America,0.767
+Colombia,COL,2016,21.13,South America,0.772
+Colombia,COL,2017,21.84,South America,0.774
+Colombia,COL,2018,22.84,South America,0.775
+Colombia,COL,2019,23.92,South America,0.777
+Comoros,COM,2004,37.17,Africa,0.492
+Comoros,COM,2014,27.58,Africa,0.56
+Congo,COG,2005,29.87,Africa,0.569
+Congo,COG,2009,22.27,Africa,0.602
+Costa Rica,CRI,2001,21.96,North America,0.726
+Costa Rica,CRI,2002,20.76,North America,0.73
+Costa Rica,CRI,2003,21.62,North America,0.736
+Costa Rica,CRI,2004,20.17,North America,0.741
+Costa Rica,CRI,2005,18.66,North America,0.748
+Costa Rica,CRI,2006,18.47,North America,0.755
+Costa Rica,CRI,2007,17.47,North America,0.76
+Costa Rica,CRI,2008,17.32,North America,0.769
+Costa Rica,CRI,2009,19.64,North America,0.773
+Costa Rica,CRI,2010,19.09,North America,0.776
+Costa Rica,CRI,2011,21.14,North America,0.783
+Costa Rica,CRI,2012,17.57,North America,0.789
+Costa Rica,CRI,2013,17.97,North America,0.795
+Costa Rica,CRI,2014,18.31,North America,0.802
+Costa Rica,CRI,2015,18.65,North America,0.803
+Costa Rica,CRI,2016,20.45,North America,0.805
+Costa Rica,CRI,2017,19.96,North America,0.809
+Costa Rica,CRI,2018,18.68,North America,0.813
+Costa Rica,CRI,2019,17.58,North America,0.821
+Costa Rica,CRI,2020,19.95,North America,0.819
+Cote d'Ivoire,CIV,2012,22.76,Africa,0.478
+Cote d'Ivoire,CIV,2013,17.51,Africa,0.487
+Cote d'Ivoire,CIV,2016,25.76,Africa,0.53
+Cote d'Ivoire,CIV,2017,34.83,Africa,0.539
+Cote d'Ivoire,CIV,2019,21.92,Africa,0.552
+Croatia,HRV,2005,16.72,Europe,0.814
+Croatia,HRV,2006,14.18,Europe,0.819
+Croatia,HRV,2007,12.87,Europe,0.825
+Croatia,HRV,2008,11.62,Europe,0.827
+Croatia,HRV,2009,13.43,Europe,0.826
+Croatia,HRV,2010,15.67,Europe,0.831
+Croatia,HRV,2011,16.22,Europe,0.836
+Croatia,HRV,2012,16.59,Europe,0.839
+Croatia,HRV,2013,19.63,Europe,0.846
+Croatia,HRV,2014,19.33,Europe,0.848
+Croatia,HRV,2015,18.12,Europe,0.852
+Croatia,HRV,2016,16.9,Europe,0.856
+Croatia,HRV,2017,15.35,Europe,0.862
+Croatia,HRV,2018,13.57,Europe,0.867
+Croatia,HRV,2019,11.78,Europe,0.872
+Croatia,HRV,2020,12.24,Europe,0.867
+Curacao,CUW,2018,5.06,North America,NA
+Curacao,CUW,2020,17.46,North America,NA
+Cyprus,CYP,2000,10.05,Europe,0.808
+Cyprus,CYP,2001,7.77,Europe,0.815
+Cyprus,CYP,2002,8.38,Europe,0.827
+Cyprus,CYP,2003,8.93,Europe,0.835
+Cyprus,CYP,2004,21.79,Europe,0.84
+Cyprus,CYP,2005,19.52,Europe,0.844
+Cyprus,CYP,2006,10.73,Europe,0.85
+Cyprus,CYP,2007,8.99,Europe,0.855
+Cyprus,CYP,2008,9.65,Europe,0.862
+Cyprus,CYP,2009,9.9,Europe,0.867
+Cyprus,CYP,2010,11.68,Europe,0.869
+Cyprus,CYP,2011,14.64,Europe,0.872
+Cyprus,CYP,2012,15.98,Europe,0.872
+Cyprus,CYP,2013,18.67,Europe,0.873
+Cyprus,CYP,2014,17.01,Europe,0.875
+Cyprus,CYP,2015,15.3,Europe,0.882
+Cyprus,CYP,2016,16.02,Europe,0.888
+Cyprus,CYP,2017,16.09,Europe,0.897
+Cyprus,CYP,2018,13.21,Europe,0.902
+Cyprus,CYP,2019,13.66,Europe,0.907
+Cyprus,CYP,2020,14.36,Europe,0.905
+Czechia,CZE,2002,14.63,Europe,0.835
+Czechia,CZE,2003,13.96,Europe,0.842
+Czechia,CZE,2004,13.82,Europe,0.848
+Czechia,CZE,2005,13.41,Europe,0.856
+Czechia,CZE,2006,9.49,Europe,0.864
+Czechia,CZE,2007,7.1,Europe,0.87
+Czechia,CZE,2008,6.82,Europe,0.873
+Czechia,CZE,2009,8.61,Europe,0.875
+Czechia,CZE,2010,9.04,Europe,0.88
+Czechia,CZE,2011,8.72,Europe,0.883
+Czechia,CZE,2012,9.23,Europe,0.885
+Czechia,CZE,2013,9.45,Europe,0.892
+Czechia,CZE,2014,8.42,Europe,0.898
+Czechia,CZE,2015,7.72,Europe,0.9
+Czechia,CZE,2016,7.15,Europe,0.902
+Czechia,CZE,2017,6.4,Europe,0.904
+Czechia,CZE,2018,5.74,Europe,0.901
+Czechia,CZE,2019,5.82,Europe,0.903
+Czechia,CZE,2020,6.68,Europe,0.898
+Democratic Republic of Congo,COD,2005,18.46,Africa,0.408
+Democratic Republic of Congo,COD,2012,21.36,Africa,0.451
+Democratic Republic of Congo,COD,2020,31.37,Africa,0.506
+Denmark,DNK,2003,5.44,Europe,0.907
+Denmark,DNK,2004,5.45,Europe,0.912
+Denmark,DNK,2005,4.31,Europe,0.917
+Denmark,DNK,2006,3.62,Europe,0.917
+Denmark,DNK,2007,4.3,Europe,0.918
+Denmark,DNK,2008,5.18,Europe,0.922
+Denmark,DNK,2009,6.48,Europe,0.915
+Denmark,DNK,2010,6.86,Europe,0.92
+Denmark,DNK,2011,7.19,Europe,0.934
+Denmark,DNK,2012,7.35,Europe,0.938
+Denmark,DNK,2013,6.63,Europe,0.941
+Denmark,DNK,2014,6.39,Europe,0.939
+Denmark,DNK,2015,7.03,Europe,0.943
+Denmark,DNK,2016,6.72,Europe,0.951
+Denmark,DNK,2017,7.58,Europe,0.951
+Denmark,DNK,2018,7.68,Europe,0.95
+Denmark,DNK,2019,7.72,Europe,0.953
+Denmark,DNK,2020,7.44,Europe,0.954
+Djibouti,DJI,2017,22.82,Africa,0.484
+Dominican Republic,DOM,2000,19.85,North America,0.658
+Dominican Republic,DOM,2001,21.09,North America,0.663
+Dominican Republic,DOM,2002,20.51,North America,0.668
+Dominican Republic,DOM,2003,21.13,North America,0.67
+Dominican Republic,DOM,2004,20.8,North America,0.673
+Dominican Republic,DOM,2005,20.51,North America,0.683
+Dominican Republic,DOM,2006,19.54,North America,0.691
+Dominican Republic,DOM,2007,19.3,North America,0.698
+Dominican Republic,DOM,2008,19.29,North America,0.704
+Dominican Republic,DOM,2009,21.74,North America,0.707
+Dominican Republic,DOM,2010,21.01,North America,0.715
+Dominican Republic,DOM,2011,20.08,North America,0.721
+Dominican Republic,DOM,2012,20.35,North America,0.727
+Dominican Republic,DOM,2013,20.96,North America,0.731
+Dominican Republic,DOM,2014,19.65,North America,0.737
+Dominican Republic,DOM,2015,25.23,North America,0.747
+Dominican Republic,DOM,2016,25.37,North America,0.766
+Dominican Republic,DOM,2017,24.34,North America,0.77
+Dominican Republic,DOM,2018,24.5,North America,0.773
+Dominican Republic,DOM,2019,24.77,North America,0.771
+Dominican Republic,DOM,2020,37.7,North America,0.767
+East Timor,TLS,2007,25.89,Asia,0.609
+East Timor,TLS,2010,19.04,Asia,0.645
+East Timor,TLS,2013,16.72,Asia,0.646
+East Timor,TLS,2016,20.95,Asia,0.618
+Ecuador,ECU,2000,20.96,South America,0.683
+Ecuador,ECU,2001,18.03,South America,0.691
+Ecuador,ECU,2003,21.03,South America,0.703
+Ecuador,ECU,2004,18.43,South America,0.709
+Ecuador,ECU,2005,17.46,South America,0.714
+Ecuador,ECU,2006,17.05,South America,0.718
+Ecuador,ECU,2007,16.37,South America,0.722
+Ecuador,ECU,2008,16.14,South America,0.729
+Ecuador,ECU,2009,16.5,South America,0.731
+Ecuador,ECU,2010,15.66,South America,0.737
+Ecuador,ECU,2011,16.43,South America,0.743
+Ecuador,ECU,2012,16.55,South America,0.75
+Ecuador,ECU,2013,17.36,South America,0.755
+Ecuador,ECU,2014,20.23,South America,0.76
+Ecuador,ECU,2015,19.81,South America,0.764
+Ecuador,ECU,2016,18.44,South America,0.761
+Ecuador,ECU,2017,17.56,South America,0.764
+Ecuador,ECU,2018,17.67,South America,0.767
+Ecuador,ECU,2019,17.52,South America,0.765
+Egypt,EGY,2008,29.66,Africa,0.665
+Egypt,EGY,2009,29.9,Africa,0.671
+Egypt,EGY,2010,33.08,Africa,0.677
+Egypt,EGY,2011,32.1,Africa,0.68
+Egypt,EGY,2012,31.55,Africa,0.689
+Egypt,EGY,2013,28.4,Africa,0.695
+Egypt,EGY,2014,26.28,Africa,0.699
+Egypt,EGY,2015,27.61,Africa,0.706
+Egypt,EGY,2016,27.61,Africa,0.713
+Egypt,EGY,2017,26.9,Africa,0.72
+Egypt,EGY,2018,27.09,Africa,0.728
+Egypt,EGY,2019,27.96,Africa,0.736
+Egypt,EGY,2020,30.16,Africa,0.736
+El Salvador,SLV,2009,28.93,North America,0.653
+El Salvador,SLV,2010,27.21,North America,0.66
+El Salvador,SLV,2011,25.91,North America,0.662
+El Salvador,SLV,2012,26.03,North America,0.666
+El Salvador,SLV,2013,25.35,North America,0.668
+El Salvador,SLV,2014,28.5,North America,0.668
+El Salvador,SLV,2015,28.54,North America,0.667
+El Salvador,SLV,2016,28.22,North America,0.666
+El Salvador,SLV,2017,28.4,North America,0.665
+El Salvador,SLV,2018,27.15,North America,0.67
+El Salvador,SLV,2019,27.94,North America,0.67
+El Salvador,SLV,2020,25.17,North America,0.66
+Estonia,EST,2003,12.12,Europe,0.824
+Estonia,EST,2004,15.56,Europe,0.834
+Estonia,EST,2005,10.94,Europe,0.847
+Estonia,EST,2006,9.18,Europe,0.855
+Estonia,EST,2007,9.38,Europe,0.859
+Estonia,EST,2008,9.17,Europe,0.864
+Estonia,EST,2009,14.62,Europe,0.863
+Estonia,EST,2010,14.07,Europe,0.868
+Estonia,EST,2011,11.54,Europe,0.877
+Estonia,EST,2012,12.3,Europe,0.88
+Estonia,EST,2013,11.42,Europe,0.887
+Estonia,EST,2014,12.04,Europe,0.885
+Estonia,EST,2015,10.84,Europe,0.888
+Estonia,EST,2016,9.2,Europe,0.89
+Estonia,EST,2017,9.42,Europe,0.894
+Estonia,EST,2018,9.85,Europe,0.897
+Estonia,EST,2019,6.94,Europe,0.901
+Estonia,EST,2020,8.84,Europe,0.901
+Eswatini,SWZ,2016,35.5,Africa,0.619
+Ethiopia,ETH,2013,10.48,Africa,0.441
+Fiji,FJI,2005,20.55,Oceania,0.681
+Fiji,FJI,2011,18.4,Oceania,0.701
+Fiji,FJI,2014,19.09,Oceania,0.712
+Fiji,FJI,2016,20.09,Oceania,0.719
+Finland,FIN,2003,10.96,Europe,0.915
+Finland,FIN,2004,9.78,Europe,0.911
+Finland,FIN,2005,8.09,Europe,0.914
+Finland,FIN,2006,7.86,Europe,0.917
+Finland,FIN,2007,7.09,Europe,0.92
+Finland,FIN,2008,7.95,Europe,0.921
+Finland,FIN,2009,9.84,Europe,0.916
+Finland,FIN,2010,9.02,Europe,0.92
+Finland,FIN,2011,8.43,Europe,0.924
+Finland,FIN,2012,8.56,Europe,0.924
+Finland,FIN,2013,9.3,Europe,0.934
+Finland,FIN,2014,10.17,Europe,0.936
+Finland,FIN,2015,10.56,Europe,0.938
+Finland,FIN,2016,9.92,Europe,0.94
+Finland,FIN,2017,9.4,Europe,0.942
+Finland,FIN,2018,8.52,Europe,0.945
+Finland,FIN,2019,8.16,Europe,0.947
+Finland,FIN,2020,9.25,Europe,0.947
+France,FRA,2003,9.52,Europe,0.862
+France,FRA,2004,10.69,Europe,0.869
+France,FRA,2005,11.35,Europe,0.877
+France,FRA,2006,11.78,Europe,0.881
+France,FRA,2007,11,Europe,0.884
+France,FRA,2008,10.87,Europe,0.884
+France,FRA,2009,14.34,Europe,0.883
+France,FRA,2010,12.88,Europe,0.888
+France,FRA,2011,12.41,Europe,0.892
+France,FRA,2012,12.84,Europe,0.893
+France,FRA,2013,13.43,Europe,0.896
+France,FRA,2014,13.5,Europe,0.9
+France,FRA,2015,13.97,Europe,0.901
+France,FRA,2016,13.94,Europe,0.905
+France,FRA,2017,13.43,Europe,0.908
+France,FRA,2018,13.08,Europe,0.911
+France,FRA,2019,12.62,Europe,0.914
+France,FRA,2020,12.7,Europe,0.909
+Gambia,GMB,2012,34,Africa,0.469
+Gambia,GMB,2018,29.44,Africa,0.5
+Georgia,GEO,2012,32.56,Asia,0.789
+Georgia,GEO,2013,30.95,Asia,0.796
+Georgia,GEO,2014,28.77,Asia,0.802
+Georgia,GEO,2015,27.44,Asia,0.807
+Georgia,GEO,2016,26.82,Asia,0.809
+Georgia,GEO,2017,24.76,Asia,0.816
+Georgia,GEO,2018,26.85,Asia,0.824
+Georgia,GEO,2019,26,Asia,0.83
+Georgia,GEO,2020,24.91,Asia,0.822
+Germany,DEU,2003,10.03,Europe,0.914
+Germany,DEU,2004,10.08,Europe,0.923
+Germany,DEU,2005,11.28,Europe,0.923
+Germany,DEU,2006,10.06,Europe,0.927
+Germany,DEU,2007,9.3,Europe,0.931
+Germany,DEU,2008,8.43,Europe,0.933
+Germany,DEU,2009,8.8,Europe,0.933
+Germany,DEU,2010,8.3,Europe,0.936
+Germany,DEU,2011,7.49,Europe,0.942
+Germany,DEU,2012,7.1,Europe,0.944
+Germany,DEU,2013,6.25,Europe,0.945
+Germany,DEU,2014,6.36,Europe,0.949
+Germany,DEU,2015,6.17,Europe,0.948
+Germany,DEU,2016,6.69,Europe,0.949
+Germany,DEU,2017,6.26,Europe,0.951
+Germany,DEU,2018,5.9,Europe,0.952
+Germany,DEU,2019,5.66,Europe,0.957
+Germany,DEU,2020,7.42,Europe,0.955
+Ghana,GHA,2000,30.37,Africa,0.487
+Ghana,GHA,2006,26.92,Africa,0.524
+Ghana,GHA,2010,20.25,Africa,0.558
+Ghana,GHA,2013,14.13,Africa,0.582
+Ghana,GHA,2015,25.56,Africa,0.588
+Ghana,GHA,2017,23,Africa,0.594
+Greece,GRC,2000,24.96,Europe,0.828
+Greece,GRC,2001,24.51,Europe,0.837
+Greece,GRC,2002,24,Europe,0.836
+Greece,GRC,2003,29.11,Europe,0.842
+Greece,GRC,2004,24.52,Europe,0.851
+Greece,GRC,2005,22.44,Europe,0.863
+Greece,GRC,2006,13.33,Europe,0.871
+Greece,GRC,2007,13.05,Europe,0.866
+Greece,GRC,2008,13.1,Europe,0.871
+Greece,GRC,2009,13.47,Europe,0.874
+Greece,GRC,2010,15.77,Europe,0.876
+Greece,GRC,2011,18.31,Europe,0.874
+Greece,GRC,2012,21.13,Europe,0.874
+Greece,GRC,2013,21.24,Europe,0.879
+Greece,GRC,2014,19.87,Europe,0.886
+Greece,GRC,2015,17.9,Europe,0.888
+Greece,GRC,2016,16.24,Europe,0.884
+Greece,GRC,2017,15.88,Europe,0.887
+Greece,GRC,2018,14.69,Europe,0.893
+Greece,GRC,2019,12.98,Europe,0.896
+Greece,GRC,2020,13.53,Europe,0.896
+Guatemala,GTM,2003,22.9,North America,0.577
+Guatemala,GTM,2004,29.53,North America,0.58
+Guatemala,GTM,2006,24.53,North America,0.59
+Guatemala,GTM,2010,27.86,North America,0.623
+Guatemala,GTM,2011,25.11,North America,0.628
+Guatemala,GTM,2012,22.91,North America,0.631
+Guatemala,GTM,2013,27.65,North America,0.633
+Guatemala,GTM,2014,26.9,North America,0.65
+Guatemala,GTM,2015,26.66,North America,0.638
+Guatemala,GTM,2016,27.42,North America,0.642
+Guatemala,GTM,2017,27.26,North America,0.647
+Guatemala,GTM,2018,27.79,North America,0.649
+Guatemala,GTM,2019,28.19,North America,0.653
+Guinea,GIN,2002,24.4,Africa,0.377
+Guinea,GIN,2019,34.3,Africa,0.486
+Guinea-Bissau,GNB,2018,24.3,Africa,0.493
+Guyana,GUY,2018,43.9,South America,0.702
+Guyana,GUY,2019,46.39,South America,0.709
+Haiti,HTI,2012,21.09,North America,0.54
+Honduras,HND,2005,27.02,North America,0.578
+Honduras,HND,2006,26.84,North America,0.582
+Honduras,HND,2007,27.58,North America,0.587
+Honduras,HND,2008,25.89,North America,0.592
+Honduras,HND,2009,26.62,North America,0.594
+Honduras,HND,2010,26.21,North America,0.596
+Honduras,HND,2011,27.55,North America,0.598
+Honduras,HND,2012,28.67,North America,0.597
+Honduras,HND,2013,26.81,North America,0.601
+Honduras,HND,2014,28.67,North America,0.604
+Honduras,HND,2015,26.96,North America,0.61
+Honduras,HND,2016,27.82,North America,0.616
+Honduras,HND,2017,27.72,North America,0.618
+Honduras,HND,2018,26.62,North America,0.619
+Honduras,HND,2019,26.8,North America,0.632
+Hong Kong,HKG,2009,7.41,Asia,0.909
+Hong Kong,HKG,2010,6.95,Asia,0.912
+Hong Kong,HKG,2011,6.16,Asia,0.918
+Hong Kong,HKG,2012,6.14,Asia,0.923
+Hong Kong,HKG,2013,6.68,Asia,0.928
+Hong Kong,HKG,2014,6.62,Asia,0.932
+Hong Kong,HKG,2015,6.6,Asia,0.937
+Hong Kong,HKG,2016,6.1,Asia,0.94
+Hong Kong,HKG,2017,6.38,Asia,0.946
+Hong Kong,HKG,2018,6.49,Asia,0.952
+Hong Kong,HKG,2019,6.72,Asia,0.952
+Hong Kong,HKG,2020,8.99,Asia,0.95
+Hungary,HUN,2004,12.38,Europe,0.811
+Hungary,HUN,2005,18.79,Europe,0.816
+Hungary,HUN,2006,12.43,Europe,0.823
+Hungary,HUN,2007,11.46,Europe,0.826
+Hungary,HUN,2008,11.46,Europe,0.833
+Hungary,HUN,2009,13.61,Europe,0.834
+Hungary,HUN,2010,12.56,Europe,0.838
+Hungary,HUN,2011,13.21,Europe,0.841
+Hungary,HUN,2012,14.78,Europe,0.841
+Hungary,HUN,2013,15.47,Europe,0.85
+Hungary,HUN,2014,13.62,Europe,0.848
+Hungary,HUN,2015,11.58,Europe,0.847
+Hungary,HUN,2016,11.05,Europe,0.851
+Hungary,HUN,2017,11.04,Europe,0.853
+Hungary,HUN,2018,10.73,Europe,0.857
+Hungary,HUN,2019,11,Europe,0.861
+Hungary,HUN,2020,11.71,Europe,0.857
+Iceland,ISL,2003,4.48,Europe,0.925
+Iceland,ISL,2004,6.93,Europe,0.928
+Iceland,ISL,2005,4.66,Europe,0.935
+Iceland,ISL,2006,4.8,Europe,0.936
+Iceland,ISL,2007,4.1,Europe,0.941
+Iceland,ISL,2008,4.32,Europe,0.935
+Iceland,ISL,2009,7.33,Europe,0.934
+Iceland,ISL,2010,7.35,Europe,0.935
+Iceland,ISL,2011,6.69,Europe,0.941
+Iceland,ISL,2012,5.89,Europe,0.946
+Iceland,ISL,2013,5.47,Europe,0.95
+Iceland,ISL,2014,5.72,Europe,0.954
+Iceland,ISL,2015,4.55,Europe,0.956
+Iceland,ISL,2016,4.12,Europe,0.959
+Iceland,ISL,2017,3.87,Europe,0.962
+Iceland,ISL,2018,4.87,Europe,0.966
+Iceland,ISL,2019,4.71,Europe,0.969
+Iceland,ISL,2020,6.03,Europe,0.965
+India,IND,2000,32.71,Asia,0.501
+India,IND,2004,26.13,Asia,0.538
+India,IND,2005,36.08,Asia,0.547
+India,IND,2010,28.94,Asia,0.59
+India,IND,2012,26.86,Asia,0.609
+India,IND,2018,30.81,Asia,0.648
+India,IND,2019,31.2,Asia,0.651
+India,IND,2020,30.7,Asia,0.652
+Indonesia,IDN,2000,29.38,Asia,0.6
+Indonesia,IDN,2001,29.85,Asia,0.608
+Indonesia,IDN,2002,31.06,Asia,0.617
+Indonesia,IDN,2003,31.52,Asia,0.625
+Indonesia,IDN,2004,31.42,Asia,0.624
+Indonesia,IDN,2005,31.86,Asia,0.638
+Indonesia,IDN,2006,30.42,Asia,0.646
+Indonesia,IDN,2007,30.03,Asia,0.649
+Indonesia,IDN,2008,28.15,Asia,0.653
+Indonesia,IDN,2009,27.67,Asia,0.663
+Indonesia,IDN,2010,26.65,Asia,0.67
+Indonesia,IDN,2011,25.9,Asia,0.678
+Indonesia,IDN,2012,22.95,Asia,0.686
+Indonesia,IDN,2013,22.89,Asia,0.69
+Indonesia,IDN,2014,22.35,Asia,0.693
+Indonesia,IDN,2015,22.92,Asia,0.701
+Indonesia,IDN,2016,22.48,Asia,0.705
+Indonesia,IDN,2017,21.45,Asia,0.712
+Indonesia,IDN,2018,21.74,Asia,0.715
+Indonesia,IDN,2019,20.55,Asia,0.714
+Indonesia,IDN,2020,21.8,Asia,0.71
+Iran,IRN,2005,36.01,Asia,0.746
+Iran,IRN,2006,35.81,Asia,0.757
+Iran,IRN,2007,34.46,Asia,0.761
+Iran,IRN,2008,34.19,Asia,0.765
+Iran,IRN,2009,34.83,Asia,0.771
+Iran,IRN,2010,34.43,Asia,0.778
+Iran,IRN,2011,32.9,Asia,0.787
+Iran,IRN,2012,32.1,Asia,0.795
+Iran,IRN,2013,33.45,Asia,0.794
+Iran,IRN,2014,33.33,Asia,0.795
+Iran,IRN,2015,32.75,Asia,0.788
+Iran,IRN,2016,32.38,Asia,0.791
+Iran,IRN,2017,32.26,Asia,0.793
+Iran,IRN,2018,32.09,Asia,0.79
+Iran,IRN,2019,30.4,Asia,0.787
+Iran,IRN,2020,29.4,Asia,0.775
+Iraq,IRQ,2007,46.24,Asia,0.618
+Iraq,IRQ,2012,40.64,Asia,0.664
+Ireland,IRL,2003,8.84,Europe,0.891
+Ireland,IRL,2004,10.36,Europe,0.899
+Ireland,IRL,2005,15.13,Europe,0.905
+Ireland,IRL,2006,14.43,Europe,0.908
+Ireland,IRL,2007,10.06,Europe,0.911
+Ireland,IRL,2008,12.52,Europe,0.907
+Ireland,IRL,2009,18.29,Europe,0.907
+Ireland,IRL,2010,19.43,Europe,0.915
+Ireland,IRL,2011,19.14,Europe,0.909
+Ireland,IRL,2012,19.18,Europe,0.911
+Ireland,IRL,2013,16.42,Europe,0.915
+Ireland,IRL,2014,15.24,Europe,0.921
+Ireland,IRL,2015,14.25,Europe,0.931
+Ireland,IRL,2016,12.57,Europe,0.936
+Ireland,IRL,2017,10.93,Europe,0.941
+Ireland,IRL,2018,10.07,Europe,0.944
+Ireland,IRL,2019,10.09,Europe,0.947
+Ireland,IRL,2020,12.02,Europe,0.948
+Israel,ISR,2012,15.38,Asia,0.893
+Israel,ISR,2013,14.42,Asia,0.899
+Israel,ISR,2014,14.47,Asia,0.902
+Israel,ISR,2015,14.31,Asia,0.902
+Israel,ISR,2016,13.68,Asia,0.905
+Israel,ISR,2017,13.57,Asia,0.908
+Israel,ISR,2018,13.42,Asia,0.911
+Israel,ISR,2019,14.28,Asia,0.913
+Israel,ISR,2020,16.06,Asia,0.912
+Italy,ITA,2004,16.27,Europe,0.874
+Italy,ITA,2005,17.05,Europe,0.876
+Italy,ITA,2006,16.77,Europe,0.881
+Italy,ITA,2007,16.14,Europe,0.885
+Italy,ITA,2008,16.56,Europe,0.885
+Italy,ITA,2009,17.55,Europe,0.884
+Italy,ITA,2010,18.97,Europe,0.887
+Italy,ITA,2011,19.64,Europe,0.89
+Italy,ITA,2012,20.94,Europe,0.887
+Italy,ITA,2013,22.14,Europe,0.887
+Italy,ITA,2014,22.04,Europe,0.89
+Italy,ITA,2015,21.33,Europe,0.889
+Italy,ITA,2016,19.8,Europe,0.894
+Italy,ITA,2017,19.99,Europe,0.897
+Italy,ITA,2018,19.19,Europe,0.902
+Italy,ITA,2019,18.05,Europe,0.906
+Italy,ITA,2020,18.93,Europe,0.899
+Jamaica,JAM,2008,27.84,North America,0.711
+Jamaica,JAM,2009,30.7,North America,0.711
+Jamaica,JAM,2010,31.61,North America,0.708
+Jamaica,JAM,2011,31.52,North America,0.711
+Jamaica,JAM,2012,32.3,North America,0.711
+Jamaica,JAM,2013,33.78,North America,0.711
+Jamaica,JAM,2014,32.96,North America,0.712
+Jamaica,JAM,2016,29.76,North America,0.714
+Jamaica,JAM,2017,27.88,North America,0.715
+Jamaica,JAM,2018,26.06,North America,0.715
+Jamaica,JAM,2019,22.91,North America,0.716
+Jamaica,JAM,2020,29.66,North America,0.711
+Japan,JPN,2009,4.43,Asia,0.905
+Japan,JPN,2010,4.34,Asia,0.907
+Japan,JPN,2012,4.26,Asia,0.909
+Japan,JPN,2013,3.96,Asia,0.912
+Japan,JPN,2014,3.74,Asia,0.914
+Japan,JPN,2015,3.66,Asia,0.917
+Japan,JPN,2016,3.55,Asia,0.918
+Japan,JPN,2017,3.32,Asia,0.92
+Japan,JPN,2018,2.97,Asia,0.921
+Japan,JPN,2019,3.14,Asia,0.922
+Jordan,JOR,2017,38.06,Asia,0.747
+Jordan,JOR,2018,36.52,Asia,0.747
+Jordan,JOR,2019,36,Asia,0.75
+Jordan,JOR,2020,35.38,Asia,0.743
+Kazakhstan,KAZ,2001,18.6,Asia,0.707
+Kazakhstan,KAZ,2002,14.88,Asia,0.72
+Kazakhstan,KAZ,2003,13.53,Asia,0.732
+Kazakhstan,KAZ,2004,13.24,Asia,0.743
+Kazakhstan,KAZ,2005,12.81,Asia,0.754
+Kazakhstan,KAZ,2006,12.5,Asia,0.765
+Kazakhstan,KAZ,2007,10.73,Asia,0.772
+Kazakhstan,KAZ,2008,9.71,Asia,0.771
+Kazakhstan,KAZ,2009,9.55,Asia,0.774
+Kazakhstan,KAZ,2010,8.2,Asia,0.781
+Kazakhstan,KAZ,2011,7.8,Asia,0.79
+Kazakhstan,KAZ,2012,8.03,Asia,0.799
+Kazakhstan,KAZ,2013,8.02,Asia,0.808
+Kazakhstan,KAZ,2014,8.76,Asia,0.813
+Kazakhstan,KAZ,2015,8.46,Asia,0.819
+Kazakhstan,KAZ,2016,9.49,Asia,0.82
+Kenya,KEN,2005,22.7,Africa,0.532
+Kenya,KEN,2006,22.7,Africa,0.541
+Kenya,KEN,2016,13.73,Africa,0.594
+Kenya,KEN,2019,19.67,Africa,0.611
+Kiribati,KIR,2015,46.89,Oceania,0.623
+Kiribati,KIR,2019,52.01,Oceania,0.635
+Kiribati,KIR,2020,47.58,Oceania,0.632
+Kosovo,OWID_KOS,2012,35.88,Europe,NA
+Kosovo,OWID_KOS,2013,35.77,Europe,NA
+Kosovo,OWID_KOS,2014,30.23,Europe,NA
+Kosovo,OWID_KOS,2015,31.68,Europe,NA
+Kosovo,OWID_KOS,2016,30.26,Europe,NA
+Kosovo,OWID_KOS,2017,27.56,Europe,NA
+Kosovo,OWID_KOS,2018,29.69,Europe,NA
+Kosovo,OWID_KOS,2019,32.61,Europe,NA
+Kosovo,OWID_KOS,2020,33.48,Europe,NA
+Kyrgyzstan,KGZ,2009,17.8,Asia,0.669
+Kyrgyzstan,KGZ,2010,14.87,Asia,0.668
+Kyrgyzstan,KGZ,2011,14.59,Asia,0.67
+Kyrgyzstan,KGZ,2012,15.66,Asia,0.679
+Kyrgyzstan,KGZ,2013,18.56,Asia,0.686
+Kyrgyzstan,KGZ,2014,18.37,Asia,0.691
+Kyrgyzstan,KGZ,2015,18.25,Asia,0.695
+Kyrgyzstan,KGZ,2016,17.57,Asia,0.7
+Kyrgyzstan,KGZ,2017,18.19,Asia,0.704
+Kyrgyzstan,KGZ,2018,17.54,Asia,0.708
+Kyrgyzstan,KGZ,2019,18.11,Asia,0.708
+Kyrgyzstan,KGZ,2020,18.07,Asia,0.7
+Laos,LAO,2010,5.12,Asia,0.556
+Laos,LAO,2017,25.8,Asia,0.612
+Latvia,LVA,2003,12.73,Europe,0.798
+Latvia,LVA,2004,12.34,Europe,0.809
+Latvia,LVA,2005,10.89,Europe,0.818
+Latvia,LVA,2006,11.46,Europe,0.823
+Latvia,LVA,2007,11.94,Europe,0.829
+Latvia,LVA,2008,11.82,Europe,0.837
+Latvia,LVA,2009,17.49,Europe,0.836
+Latvia,LVA,2010,17.81,Europe,0.833
+Latvia,LVA,2011,16.03,Europe,0.84
+Latvia,LVA,2012,14.89,Europe,0.843
+Latvia,LVA,2013,13.03,Europe,0.852
+Latvia,LVA,2014,12.01,Europe,0.854
+Latvia,LVA,2015,10.52,Europe,0.859
+Latvia,LVA,2016,11.21,Europe,0.864
+Latvia,LVA,2017,10.26,Europe,0.87
+Latvia,LVA,2018,7.84,Europe,0.875
+Latvia,LVA,2019,7.86,Europe,0.88
+Latvia,LVA,2020,7.06,Europe,0.879
+Lebanon,LBN,2007,21.3,Asia,0.726
+Lebanon,LBN,2019,23.52,Asia,0.771
+Lesotho,LSO,2019,35.15,Africa,0.541
+Liberia,LBR,2010,24.28,Africa,0.467
+Liberia,LBR,2014,15.13,Africa,0.479
+Liberia,LBR,2016,13.23,Africa,0.485
+Liberia,LBR,2017,40.78,Africa,0.491
+Lithuania,LTU,2004,9.88,Europe,0.821
+Lithuania,LTU,2005,8.77,Europe,0.828
+Lithuania,LTU,2006,8.32,Europe,0.834
+Lithuania,LTU,2007,7.07,Europe,0.839
+Lithuania,LTU,2008,8.85,Europe,0.849
+Lithuania,LTU,2009,12.12,Europe,0.851
+Lithuania,LTU,2010,13.17,Europe,0.854
+Lithuania,LTU,2011,11.82,Europe,0.86
+Lithuania,LTU,2012,11.17,Europe,0.862
+Lithuania,LTU,2013,11.14,Europe,0.865
+Lithuania,LTU,2014,9.91,Europe,0.866
+Lithuania,LTU,2015,9.2,Europe,0.869
+Lithuania,LTU,2016,9.41,Europe,0.875
+Lithuania,LTU,2017,9.15,Europe,0.885
+Lithuania,LTU,2018,8.04,Europe,0.889
+Lithuania,LTU,2019,8.65,Europe,0.894
+Lithuania,LTU,2020,10.76,Europe,0.888
+Luxembourg,LUX,2003,5.14,Europe,0.87
+Luxembourg,LUX,2004,6.25,Europe,0.878
+Luxembourg,LUX,2005,5.5,Europe,0.879
+Luxembourg,LUX,2006,6.69,Europe,0.88
+Luxembourg,LUX,2007,5.66,Europe,0.883
+Luxembourg,LUX,2008,6.21,Europe,0.896
+Luxembourg,LUX,2009,5.79,Europe,0.905
+Luxembourg,LUX,2010,5.12,Europe,0.909
+Luxembourg,LUX,2011,4.74,Europe,0.911
+Luxembourg,LUX,2012,5.89,Europe,0.914
+Luxembourg,LUX,2013,4.99,Europe,0.919
+Luxembourg,LUX,2014,6.26,Europe,0.924
+Luxembourg,LUX,2015,6.17,Europe,0.913
+Luxembourg,LUX,2016,5.37,Europe,0.916
+Luxembourg,LUX,2017,5.91,Europe,0.913
+Luxembourg,LUX,2018,5.28,Europe,0.915
+Luxembourg,LUX,2019,5.6,Europe,0.916
+Luxembourg,LUX,2020,6.55,Europe,0.916
+Macao,MAC,2009,7.19,Asia,NA
+Macao,MAC,2010,6.19,Asia,NA
+Macao,MAC,2011,6.3,Asia,NA
+Macao,MAC,2012,5.76,Asia,NA
+Macao,MAC,2013,5.27,Asia,NA
+Macao,MAC,2014,5,Asia,NA
+Macao,MAC,2015,5.31,Asia,NA
+Macao,MAC,2016,4.96,Asia,NA
+Madagascar,MDG,2012,3.79,Africa,0.496
+Malawi,MWI,2005,17.24,Africa,0.427
+Malawi,MWI,2011,18.07,Africa,0.483
+Malawi,MWI,2013,19.46,Africa,0.494
+Malawi,MWI,2017,20.95,Africa,0.508
+Malawi,MWI,2020,19.41,Africa,0.512
+Malaysia,MYS,2011,14.37,Asia,0.782
+Malaysia,MYS,2012,13.95,Asia,0.787
+Malaysia,MYS,2013,13.65,Asia,0.791
+Malaysia,MYS,2014,12.77,Asia,0.795
+Malaysia,MYS,2016,11.69,Asia,0.805
+Malaysia,MYS,2017,11.8,Asia,0.807
+Malaysia,MYS,2018,12.47,Asia,0.809
+Malaysia,MYS,2019,11.41,Asia,0.812
+Malaysia,MYS,2020,13.63,Asia,0.81
+Maldives,MDV,2009,32.54,Asia,0.682
+Maldives,MDV,2014,21.84,Asia,0.718
+Maldives,MDV,2016,23.79,Asia,0.732
+Maldives,MDV,2019,26.27,Asia,0.749
+Mali,MLI,2010,13.47,Africa,0.41
+Mali,MLI,2013,18.22,Africa,0.409
+Mali,MLI,2014,21.31,Africa,0.414
+Mali,MLI,2015,24.94,Africa,0.413
+Mali,MLI,2016,33.98,Africa,0.411
+Mali,MLI,2017,28.56,Africa,0.416
+Mali,MLI,2018,26.72,Africa,0.421
+Mali,MLI,2020,30.86,Africa,0.414
+Malta,MLT,2004,12.22,Europe,0.832
+Malta,MLT,2005,11.9,Europe,0.84
+Malta,MLT,2006,10.34,Europe,0.838
+Malta,MLT,2007,11.54,Europe,0.845
+Malta,MLT,2008,8.27,Europe,0.848
+Malta,MLT,2009,9.88,Europe,0.854
+Malta,MLT,2010,9.53,Europe,0.867
+Malta,MLT,2011,10.18,Europe,0.862
+Malta,MLT,2012,10.82,Europe,0.87
+Malta,MLT,2013,9.91,Europe,0.88
+Malta,MLT,2014,10.27,Europe,0.886
+Malta,MLT,2015,10.54,Europe,0.892
+Malta,MLT,2016,8.76,Europe,0.891
+Malta,MLT,2017,8.59,Europe,0.901
+Malta,MLT,2018,7.28,Europe,0.908
+Malta,MLT,2019,8.56,Europe,0.91
+Malta,MLT,2020,9.3,Europe,0.903
+Marshall Islands,MHL,2019,42.94,Oceania,0.722
+Mauritania,MRT,2012,39.7,Africa,0.538
+Mauritania,MRT,2017,35.53,Africa,0.551
+Mauritania,MRT,2019,44.08,Africa,0.566
+Mauritius,MUS,2001,33.84,Africa,0.697
+Mauritius,MUS,2002,30.22,Africa,0.701
+Mauritius,MUS,2003,27.36,Africa,0.709
+Mauritius,MUS,2004,27.99,Africa,0.716
+Mauritius,MUS,2005,28.48,Africa,0.723
+Mauritius,MUS,2006,22.23,Africa,0.729
+Mauritius,MUS,2007,20.61,Africa,0.736
+Mauritius,MUS,2008,21.34,Africa,0.742
+Mauritius,MUS,2009,21.83,Africa,0.748
+Mauritius,MUS,2010,21.52,Africa,0.755
+Mauritius,MUS,2011,21.54,Africa,0.762
+Mauritius,MUS,2012,21.61,Africa,0.778
+Mauritius,MUS,2013,21.17,Africa,0.781
+Mauritius,MUS,2014,20.86,Africa,0.79
+Mauritius,MUS,2015,20.09,Africa,0.792
+Mauritius,MUS,2016,20.32,Africa,0.795
+Mauritius,MUS,2017,19.94,Africa,0.799
+Mauritius,MUS,2018,20.46,Africa,0.801
+Mauritius,MUS,2019,18.08,Africa,0.803
+Mexico,MEX,2005,21.46,North America,0.736
+Mexico,MEX,2006,21.3,North America,0.745
+Mexico,MEX,2007,21.09,North America,0.747
+Mexico,MEX,2008,21.91,North America,0.75
+Mexico,MEX,2009,22.14,North America,0.749
+Mexico,MEX,2010,22.18,North America,0.751
+Mexico,MEX,2011,21.82,North America,0.757
+Mexico,MEX,2012,21.14,North America,0.764
+Mexico,MEX,2013,20.47,North America,0.765
+Mexico,MEX,2014,20.28,North America,0.769
+Mexico,MEX,2015,19.72,North America,0.773
+Mexico,MEX,2016,19.5,North America,0.778
+Mexico,MEX,2017,18.7,North America,0.781
+Mexico,MEX,2018,18.41,North America,0.785
+Mexico,MEX,2019,18.3,North America,0.788
+Mexico,MEX,2020,20.38,North America,0.763
+Micronesia (country),FSM,2014,28.67,Oceania,0.602
+Moldova,MDA,2000,24.85,Europe,NA
+Moldova,MDA,2001,24.77,Europe,NA
+Moldova,MDA,2002,25.57,Europe,NA
+Moldova,MDA,2003,25.14,Europe,NA
+Moldova,MDA,2004,26.59,Europe,NA
+Moldova,MDA,2005,26.44,Europe,0.702
+Moldova,MDA,2006,23.6,Europe,0.711
+Moldova,MDA,2007,22.85,Europe,0.718
+Moldova,MDA,2008,20.54,Europe,0.728
+Moldova,MDA,2009,21.23,Europe,0.729
+Moldova,MDA,2010,19.45,Europe,0.739
+Moldova,MDA,2011,19.72,Europe,0.748
+Moldova,MDA,2012,19.28,Europe,0.754
+Moldova,MDA,2013,18.63,Europe,0.758
+Moldova,MDA,2014,16.85,Europe,0.762
+Moldova,MDA,2015,15.77,Europe,0.759
+Moldova,MDA,2016,16.27,Europe,0.763
+Moldova,MDA,2017,16.92,Europe,0.769
+Moldova,MDA,2018,17.83,Europe,0.772
+Moldova,MDA,2019,17.48,Europe,0.775
+Moldova,MDA,2020,15.59,Europe,0.77
+Mongolia,MNG,2003,19.84,Asia,0.643
+Mongolia,MNG,2006,18.51,Asia,0.683
+Mongolia,MNG,2008,17.84,Asia,0.707
+Mongolia,MNG,2009,18.7,Asia,0.711
+Mongolia,MNG,2010,17.63,Asia,0.714
+Mongolia,MNG,2011,16.54,Asia,0.725
+Mongolia,MNG,2012,17.59,Asia,0.735
+Mongolia,MNG,2013,18.39,Asia,0.744
+Mongolia,MNG,2014,17.45,Asia,0.748
+Mongolia,MNG,2015,16.81,Asia,0.753
+Mongolia,MNG,2016,20.45,Asia,0.759
+Mongolia,MNG,2017,19.82,Asia,0.759
+Mongolia,MNG,2018,18.88,Asia,0.767
+Mongolia,MNG,2019,18.45,Asia,0.758
+Mongolia,MNG,2020,18.5,Asia,0.741
+Montenegro,MNE,2011,16.32,Europe,0.822
+Montenegro,MNE,2012,16.94,Europe,0.825
+Montenegro,MNE,2013,17.87,Europe,0.83
+Montenegro,MNE,2014,17.72,Europe,0.833
+Montenegro,MNE,2015,19.15,Europe,0.839
+Montenegro,MNE,2016,18.4,Europe,0.836
+Montenegro,MNE,2017,16.69,Europe,0.843
+Montenegro,MNE,2018,16.3,Europe,0.849
+Montenegro,MNE,2019,17.34,Europe,0.851
+Montenegro,MNE,2020,21.09,Europe,0.841
+Myanmar,MMR,2015,18.62,Asia,0.566
+Myanmar,MMR,2017,16.59,Asia,0.587
+Myanmar,MMR,2018,12.79,Asia,0.6
+Myanmar,MMR,2019,13.78,Asia,0.61
+Myanmar,MMR,2020,15.02,Asia,0.609
+Namibia,NAM,2010,34.12,Africa,0.591
+Namibia,NAM,2012,31.15,Africa,0.607
+Namibia,NAM,2013,32.01,Africa,0.616
+Namibia,NAM,2014,30.47,Africa,0.624
+Namibia,NAM,2016,33.55,Africa,0.634
+Namibia,NAM,2018,31.88,Africa,0.642
+Nauru,NRU,2013,36.4,Oceania,0.64
+Nepal,NPL,2008,23.13,Asia,0.526
+Nepal,NPL,2017,34.76,Asia,0.588
+Netherlands,NLD,2003,4.78,Europe,0.901
+Netherlands,NLD,2004,4.86,Europe,0.904
+Netherlands,NLD,2005,6.43,Europe,0.907
+Netherlands,NLD,2006,4.9,Europe,0.914
+Netherlands,NLD,2007,4.27,Europe,0.92
+Netherlands,NLD,2008,3.91,Europe,0.92
+Netherlands,NLD,2009,4.96,Europe,0.92
+Netherlands,NLD,2010,4.83,Europe,0.925
+Netherlands,NLD,2011,4.31,Europe,0.935
+Netherlands,NLD,2012,4.85,Europe,0.935
+Netherlands,NLD,2013,5.65,Europe,0.937
+Netherlands,NLD,2014,5.53,Europe,0.939
+Netherlands,NLD,2015,4.67,Europe,0.94
+Netherlands,NLD,2016,4.57,Europe,0.941
+Netherlands,NLD,2017,4,Europe,0.945
+Netherlands,NLD,2018,4.18,Europe,0.947
+Netherlands,NLD,2019,4.26,Europe,0.95
+Netherlands,NLD,2020,4.52,Europe,0.945
+New Caledonia,NCL,2014,11.84,Oceania,NA
+New Caledonia,NCL,2017,39.24,Oceania,NA
+New Caledonia,NCL,2018,32.43,Oceania,NA
+New Caledonia,NCL,2019,27.91,Oceania,NA
+New Caledonia,NCL,2020,33.02,Oceania,NA
+New Zealand,NZL,2004,10.79,Oceania,0.912
+New Zealand,NZL,2005,11.12,Oceania,0.917
+New Zealand,NZL,2006,10.73,Oceania,0.918
+New Zealand,NZL,2007,10.98,Oceania,0.921
+New Zealand,NZL,2008,11.24,Oceania,0.92
+New Zealand,NZL,2009,14.25,Oceania,0.923
+New Zealand,NZL,2010,13.65,Oceania,0.926
+New Zealand,NZL,2011,13.46,Oceania,0.927
+New Zealand,NZL,2012,13.78,Oceania,0.929
+New Zealand,NZL,2013,12.22,Oceania,0.933
+New Zealand,NZL,2014,11.65,Oceania,0.932
+New Zealand,NZL,2015,11.54,Oceania,0.934
+New Zealand,NZL,2016,12.18,Oceania,0.938
+New Zealand,NZL,2017,11.92,Oceania,0.936
+New Zealand,NZL,2018,12.05,Oceania,0.938
+New Zealand,NZL,2019,11.62,Oceania,0.938
+New Zealand,NZL,2020,12.94,Oceania,0.94
+Nicaragua,NIC,2001,26.08,North America,0.601
+Nicaragua,NIC,2005,22.82,North America,0.63
+Nicaragua,NIC,2012,15.02,North America,0.664
+Nicaragua,NIC,2014,24.49,North America,0.674
+Niger,NER,2011,19.43,Africa,0.346
+Niger,NER,2014,25.2,Africa,0.369
+Niger,NER,2017,68.66,Africa,0.384
+Nigeria,NGA,2011,29.09,Africa,0.508
+Nigeria,NGA,2013,27.85,Africa,0.517
+Nigeria,NGA,2016,27.06,Africa,0.532
+Nigeria,NGA,2019,36.65,Africa,0.544
+North Macedonia,MKD,2006,34.48,Europe,0.726
+North Macedonia,MKD,2007,33.65,Europe,0.732
+North Macedonia,MKD,2008,31.24,Europe,0.753
+North Macedonia,MKD,2009,27.94,Europe,0.757
+North Macedonia,MKD,2010,26.42,Europe,0.765
+North Macedonia,MKD,2011,25.32,Europe,0.771
+North Macedonia,MKD,2012,25.23,Europe,0.775
+North Macedonia,MKD,2013,24.64,Europe,0.782
+North Macedonia,MKD,2014,25.69,Europe,0.788
+North Macedonia,MKD,2015,24.93,Europe,0.795
+North Macedonia,MKD,2016,24.98,Europe,0.8
+North Macedonia,MKD,2017,25.61,Europe,0.807
+North Macedonia,MKD,2018,25.08,Europe,0.814
+North Macedonia,MKD,2019,18.81,Europe,0.805
+North Macedonia,MKD,2020,19.81,Europe,0.783
+Norway,NOR,2003,10.01,Europe,0.93
+Norway,NOR,2004,9.18,Europe,0.937
+Norway,NOR,2005,11.3,Europe,0.939
+Norway,NOR,2006,4.56,Europe,0.942
+Norway,NOR,2007,4.41,Europe,0.943
+Norway,NOR,2008,4.13,Europe,0.943
+Norway,NOR,2009,5,Europe,0.944
+Norway,NOR,2010,4.9,Europe,0.947
+Norway,NOR,2011,5.04,Europe,0.949
+Norway,NOR,2012,5.16,Europe,0.95
+Norway,NOR,2013,5.63,Europe,0.953
+Norway,NOR,2014,5.47,Europe,0.956
+Norway,NOR,2015,5.03,Europe,0.959
+Norway,NOR,2016,5.37,Europe,0.962
+Norway,NOR,2017,4.59,Europe,0.965
+Norway,NOR,2018,4.85,Europe,0.966
+Norway,NOR,2019,4.75,Europe,0.967
+Norway,NOR,2020,4.9,Europe,0.969
+Pakistan,PAK,2006,36.17,Asia,0.489
+Pakistan,PAK,2007,34.97,Asia,0.495
+Pakistan,PAK,2008,33.33,Asia,0.496
+Pakistan,PAK,2009,31.47,Asia,0.497
+Pakistan,PAK,2010,31.1,Asia,0.5
+Pakistan,PAK,2011,32,Asia,0.504
+Pakistan,PAK,2013,31.01,Asia,0.512
+Pakistan,PAK,2014,30.91,Asia,0.522
+Pakistan,PAK,2015,30.41,Asia,0.527
+Pakistan,PAK,2018,30.96,Asia,0.538
+Pakistan,PAK,2019,29.71,Asia,0.54
+Palau,PLW,2000,27.23,Oceania,0.736
+Palau,PLW,2014,13.26,Oceania,0.795
+Palau,PLW,2020,18.04,Oceania,0.799
+Palestine,PSE,2000,31.86,Asia,NA
+Palestine,PSE,2001,35.6,Asia,NA
+Palestine,PSE,2002,34.58,Asia,NA
+Palestine,PSE,2003,30.44,Asia,NA
+Palestine,PSE,2004,29.88,Asia,0.654
+Palestine,PSE,2005,28.95,Asia,0.663
+Palestine,PSE,2006,28.21,Asia,0.664
+Palestine,PSE,2007,28.14,Asia,0.674
+Palestine,PSE,2008,28.8,Asia,0.679
+Palestine,PSE,2009,27.98,Asia,0.685
+Palestine,PSE,2010,28.08,Asia,0.691
+Palestine,PSE,2011,27.13,Asia,0.698
+Palestine,PSE,2012,29.39,Asia,0.704
+Palestine,PSE,2013,31.17,Asia,0.706
+Palestine,PSE,2014,32.47,Asia,0.7
+Palestine,PSE,2015,31.61,Asia,0.712
+Palestine,PSE,2016,32.28,Asia,0.717
+Palestine,PSE,2017,33.04,Asia,0.721
+Palestine,PSE,2018,33.18,Asia,0.725
+Palestine,PSE,2019,32.65,Asia,0.729
+Palestine,PSE,2020,33.65,Asia,0.718
+Panama,PAN,2003,23.53,North America,0.735
+Panama,PAN,2008,22.04,North America,0.767
+Panama,PAN,2009,20.08,North America,0.77
+Panama,PAN,2010,20.89,North America,0.775
+Panama,PAN,2011,21.03,North America,0.781
+Panama,PAN,2012,17.59,North America,0.798
+Panama,PAN,2013,16.98,North America,0.799
+Panama,PAN,2014,18.76,North America,0.798
+Panama,PAN,2015,18.45,North America,0.803
+Panama,PAN,2016,17.09,North America,0.81
+Panama,PAN,2017,17.2,North America,0.815
+Panama,PAN,2018,16.38,North America,0.82
+Panama,PAN,2019,16.68,North America,0.824
+Panama,PAN,2020,18.74,North America,0.808
+Papua New Guinea,PNG,2010,35.5,Oceania,0.503
+Paraguay,PRY,2001,21.45,South America,0.671
+Paraguay,PRY,2002,25.03,South America,0.679
+Paraguay,PRY,2003,21.85,South America,0.673
+Paraguay,PRY,2004,20.57,South America,0.681
+Paraguay,PRY,2005,18.88,South America,0.683
+Paraguay,PRY,2006,19.19,South America,0.684
+Paraguay,PRY,2007,19.56,South America,0.69
+Paraguay,PRY,2008,17.55,South America,0.7
+Paraguay,PRY,2009,18.01,South America,0.7
+Paraguay,PRY,2010,19.5,South America,0.709
+Paraguay,PRY,2011,16.91,South America,0.715
+Paraguay,PRY,2012,16.02,South America,0.719
+Paraguay,PRY,2013,14.58,South America,0.73
+Paraguay,PRY,2014,16.83,South America,0.733
+Paraguay,PRY,2015,17.45,South America,0.737
+Paraguay,PRY,2016,18.57,South America,0.737
+Paraguay,PRY,2017,18.59,South America,0.74
+Peru,PER,2002,13.73,South America,0.69
+Peru,PER,2003,20.32,South America,0.689
+Peru,PER,2004,19.67,South America,0.694
+Peru,PER,2005,23.99,South America,0.691
+Peru,PER,2006,18.74,South America,0.697
+Peru,PER,2007,16.99,South America,0.708
+Peru,PER,2008,16.64,South America,0.714
+Peru,PER,2009,16.08,South America,0.717
+Peru,PER,2010,15.19,South America,0.731
+Peru,PER,2011,15.83,South America,0.738
+Peru,PER,2012,15.24,South America,0.748
+Peru,PER,2013,16.33,South America,0.757
+Peru,PER,2014,16.65,South America,0.763
+Peru,PER,2015,18.59,South America,0.768
+Peru,PER,2016,19.2,South America,0.775
+Peru,PER,2017,17.35,South America,0.775
+Peru,PER,2018,17.75,South America,0.78
+Peru,PER,2019,16.87,South America,0.784
+Peru,PER,2020,25.68,South America,0.769
+Philippines,PHL,2006,24.68,Asia,0.654
+Philippines,PHL,2007,25.03,Asia,0.659
+Philippines,PHL,2008,24.75,Asia,0.662
+Philippines,PHL,2009,24.81,Asia,0.662
+Philippines,PHL,2010,25.32,Asia,0.669
+Philippines,PHL,2011,24.42,Asia,0.674
+Philippines,PHL,2012,24.83,Asia,0.681
+Philippines,PHL,2013,24.3,Asia,0.687
+Philippines,PHL,2014,23.35,Asia,0.689
+Philippines,PHL,2015,22.84,Asia,0.69
+Philippines,PHL,2016,22.2,Asia,0.69
+Philippines,PHL,2017,21.7,Asia,0.694
+Philippines,PHL,2018,19.89,Asia,0.7
+Philippines,PHL,2019,18.76,Asia,0.708
+Philippines,PHL,2020,21.05,Asia,0.699
+Poland,POL,2004,14.48,Europe,0.82
+Poland,POL,2005,13.91,Europe,0.826
+Poland,POL,2006,12.61,Europe,0.831
+Poland,POL,2007,10.59,Europe,0.836
+Poland,POL,2008,9.04,Europe,0.841
+Poland,POL,2009,10.11,Europe,0.846
+Poland,POL,2010,10.77,Europe,0.852
+Poland,POL,2011,11.5,Europe,0.858
+Poland,POL,2012,11.82,Europe,0.863
+Poland,POL,2013,12.21,Europe,0.873
+Poland,POL,2014,11.98,Europe,0.873
+Poland,POL,2015,10.99,Europe,0.879
+Poland,POL,2016,10.52,Europe,0.884
+Poland,POL,2017,9.48,Europe,0.882
+Poland,POL,2018,8.66,Europe,0.884
+Poland,POL,2019,8.13,Europe,0.887
+Poland,POL,2020,8.63,Europe,0.88
+Portugal,PRT,2004,10.25,Europe,0.809
+Portugal,PRT,2005,11.09,Europe,0.81
+Portugal,PRT,2006,10.61,Europe,0.815
+Portugal,PRT,2007,11.16,Europe,0.821
+Portugal,PRT,2008,10.23,Europe,0.826
+Portugal,PRT,2009,11.2,Europe,0.831
+Portugal,PRT,2010,11.44,Europe,0.836
+Portugal,PRT,2011,12.55,Europe,0.843
+Portugal,PRT,2012,13.91,Europe,0.844
+Portugal,PRT,2013,14.07,Europe,0.849
+Portugal,PRT,2014,12.28,Europe,0.854
+Portugal,PRT,2015,11.27,Europe,0.857
+Portugal,PRT,2016,10.55,Europe,0.859
+Portugal,PRT,2017,9.34,Europe,0.864
+Portugal,PRT,2018,8.37,Europe,0.866
+Portugal,PRT,2019,8.02,Europe,0.872
+Portugal,PRT,2020,9.06,Europe,0.87
+Romania,ROU,2003,19.33,Europe,0.749
+Romania,ROU,2004,18.84,Europe,0.757
+Romania,ROU,2005,16.8,Europe,0.765
+Romania,ROU,2006,14.77,Europe,0.781
+Romania,ROU,2007,13.31,Europe,0.792
+Romania,ROU,2008,11.57,Europe,0.815
+Romania,ROU,2009,13.94,Europe,0.826
+Romania,ROU,2010,16.61,Europe,0.822
+Romania,ROU,2011,17.47,Europe,0.823
+Romania,ROU,2012,16.81,Europe,0.817
+Romania,ROU,2013,16.96,Europe,0.821
+Romania,ROU,2014,17.01,Europe,0.82
+Romania,ROU,2015,18.08,Europe,0.823
+Romania,ROU,2016,17.38,Europe,0.823
+Romania,ROU,2017,15.15,Europe,0.828
+Romania,ROU,2018,14.52,Europe,0.833
+Romania,ROU,2019,14.66,Europe,0.838
+Romania,ROU,2020,14.75,Europe,0.832
+Russia,RUS,2009,14.08,Europe,0.805
+Russia,RUS,2010,14.21,Europe,0.808
+Russia,RUS,2011,12.69,Europe,0.822
+Russia,RUS,2012,11.99,Europe,0.825
+Russia,RUS,2013,11.82,Europe,0.83
+Russia,RUS,2014,12.03,Europe,0.831
+Russia,RUS,2015,12.03,Europe,0.833
+Russia,RUS,2016,12.41,Europe,0.835
+Rwanda,RWA,2014,5.16,Africa,0.525
+Rwanda,RWA,2017,25.59,Africa,0.539
+Rwanda,RWA,2018,26.3,Africa,0.54
+Rwanda,RWA,2019,28.55,Africa,0.55
+Rwanda,RWA,2020,26.14,Africa,0.555
+Saint Lucia,LCA,2017,33.76,North America,0.757
+Saint Lucia,LCA,2018,32.49,North America,0.759
+Saint Lucia,LCA,2019,29.94,North America,0.745
+Saint Lucia,LCA,2020,35.41,North America,0.734
+Samoa,WSM,2012,39.06,Oceania,0.707
+Samoa,WSM,2017,28.74,Oceania,0.712
+Saudi Arabia,SAU,2019,15.6,Asia,0.878
+Saudi Arabia,SAU,2020,20.32,Asia,0.875
+Senegal,SEN,2015,36.26,Africa,0.509
+Senegal,SEN,2016,29.52,Africa,0.516
+Senegal,SEN,2017,35.52,Africa,0.517
+Senegal,SEN,2018,39.69,Africa,0.522
+Senegal,SEN,2019,33.9,Africa,0.52
+Serbia,SRB,2008,20.32,Europe,0.773
+Serbia,SRB,2009,21.61,Europe,0.774
+Serbia,SRB,2010,21.2,Europe,0.775
+Serbia,SRB,2011,21.6,Europe,0.785
+Serbia,SRB,2012,21.65,Europe,0.788
+Serbia,SRB,2013,19.79,Europe,0.792
+Serbia,SRB,2014,21,Europe,0.795
+Serbia,SRB,2015,20.36,Europe,0.802
+Serbia,SRB,2016,18.08,Europe,0.806
+Serbia,SRB,2017,17.58,Europe,0.808
+Serbia,SRB,2018,16.98,Europe,0.814
+Serbia,SRB,2019,15.66,Europe,0.817
+Serbia,SRB,2020,16.18,Europe,0.809
+Seychelles,SYC,2019,21.82,Africa,0.85
+Seychelles,SYC,2020,26.01,Africa,0.853
+Sierra Leone,SLE,2003,21.13,Africa,0.354
+Sierra Leone,SLE,2014,32.31,Africa,0.438
+Sierra Leone,SLE,2018,33.17,Africa,0.451
+Singapore,SGP,2013,3.7,Asia,0.934
+Singapore,SGP,2014,3.6,Asia,0.934
+Singapore,SGP,2015,3.6,Asia,0.935
+Singapore,SGP,2016,4.1,Asia,0.934
+Singapore,SGP,2017,4.5,Asia,0.935
+Singapore,SGP,2018,4.3,Asia,0.939
+Singapore,SGP,2019,4.13,Asia,0.942
+Singapore,SGP,2020,4.46,Asia,0.944
+Slovakia,SVK,2003,19.97,Europe,0.796
+Slovakia,SVK,2004,19.45,Europe,0.806
+Slovakia,SVK,2005,16.86,Europe,0.815
+Slovakia,SVK,2006,13.92,Europe,0.824
+Slovakia,SVK,2007,11.63,Europe,0.834
+Slovakia,SVK,2008,11.43,Europe,0.842
+Slovakia,SVK,2009,12.96,Europe,0.845
+Slovakia,SVK,2010,14.57,Europe,0.851
+Slovakia,SVK,2011,14.31,Europe,0.856
+Slovakia,SVK,2012,14.37,Europe,0.856
+Slovakia,SVK,2013,14.26,Europe,0.858
+Slovakia,SVK,2014,14.07,Europe,0.859
+Slovakia,SVK,2015,13.97,Europe,0.861
+Slovakia,SVK,2016,12.69,Europe,0.864
+Slovakia,SVK,2017,12.33,Europe,0.865
+Slovakia,SVK,2018,10.41,Europe,0.868
+Slovakia,SVK,2019,10.48,Europe,0.871
+Slovakia,SVK,2020,10.75,Europe,0.867
+Slovenia,SVN,2003,8,Europe,0.865
+Slovenia,SVN,2004,7.73,Europe,0.87
+Slovenia,SVN,2005,8.93,Europe,0.876
+Slovenia,SVN,2006,8.52,Europe,0.883
+Slovenia,SVN,2007,6.7,Europe,0.888
+Slovenia,SVN,2008,6.5,Europe,0.894
+Slovenia,SVN,2009,7.46,Europe,0.894
+Slovenia,SVN,2010,7.11,Europe,0.896
+Slovenia,SVN,2011,7.08,Europe,0.897
+Slovenia,SVN,2012,9.28,Europe,0.897
+Slovenia,SVN,2013,9.24,Europe,0.907
+Slovenia,SVN,2014,9.42,Europe,0.907
+Slovenia,SVN,2015,9.51,Europe,0.909
+Slovenia,SVN,2016,8.03,Europe,0.914
+Slovenia,SVN,2017,6.52,Europe,0.918
+Slovenia,SVN,2018,6.62,Europe,0.922
+Slovenia,SVN,2019,7.03,Europe,0.923
+Slovenia,SVN,2020,7.68,Europe,0.918
+Solomon Islands,SLB,2013,7.04,Oceania,0.576
+Somalia,SOM,2019,43.73,Africa,NA
+South Africa,ZAF,2000,31.79,Africa,0.618
+South Africa,ZAF,2001,34.65,Africa,0.613
+South Africa,ZAF,2002,35.69,Africa,0.614
+South Africa,ZAF,2003,36.58,Africa,0.61
+South Africa,ZAF,2004,35.39,Africa,0.613
+South Africa,ZAF,2005,34.42,Africa,0.616
+South Africa,ZAF,2006,33.38,Africa,0.622
+South Africa,ZAF,2007,32.63,Africa,0.632
+South Africa,ZAF,2013,30.34,Africa,0.705
+South Africa,ZAF,2014,29.93,Africa,0.713
+South Africa,ZAF,2015,28.97,Africa,0.722
+South Africa,ZAF,2016,29.31,Africa,0.722
+South Africa,ZAF,2017,28.88,Africa,0.726
+South Africa,ZAF,2018,29.6,Africa,0.732
+South Africa,ZAF,2019,30.57,Africa,0.742
+South Africa,ZAF,2020,29.88,Africa,0.724
+Spain,ESP,2003,11.69,Europe,0.846
+Spain,ESP,2004,11.76,Europe,0.852
+Spain,ESP,2005,12.96,Europe,0.857
+Spain,ESP,2006,11.83,Europe,0.862
+Spain,ESP,2007,12.03,Europe,0.864
+Spain,ESP,2008,14.25,Europe,0.865
+Spain,ESP,2009,18.09,Europe,0.867
+Spain,ESP,2010,17.81,Europe,0.875
+Spain,ESP,2011,18.25,Europe,0.879
+Spain,ESP,2012,18.6,Europe,0.881
+Spain,ESP,2013,18.63,Europe,0.886
+Spain,ESP,2014,17.14,Europe,0.89
+Spain,ESP,2015,15.64,Europe,0.895
+Spain,ESP,2016,14.62,Europe,0.9
+Spain,ESP,2017,13.32,Europe,0.902
+Spain,ESP,2018,12.45,Europe,0.905
+Spain,ESP,2019,12.13,Europe,0.91
+Spain,ESP,2020,13.88,Europe,0.901
+Sri Lanka,LKA,2010,26.68,Asia,0.748
+Sri Lanka,LKA,2011,26.52,Asia,0.753
+Sri Lanka,LKA,2013,27.46,Asia,0.764
+Sri Lanka,LKA,2014,28.8,Asia,0.767
+Sri Lanka,LKA,2015,26.63,Asia,0.769
+Sri Lanka,LKA,2016,27.09,Asia,0.772
+Sri Lanka,LKA,2017,24.72,Asia,0.777
+Sri Lanka,LKA,2018,24.18,Asia,0.782
+Sri Lanka,LKA,2019,21.21,Asia,0.781
+Sri Lanka,LKA,2020,21.51,Asia,0.78
+Sudan,SDN,2011,33.09,Africa,0.476
+Suriname,SUR,2016,18.19,South America,0.716
+Sweden,SWE,2003,6.51,Europe,0.923
+Sweden,SWE,2004,7.88,Europe,0.908
+Sweden,SWE,2005,14.16,Europe,0.911
+Sweden,SWE,2006,9.34,Europe,0.915
+Sweden,SWE,2007,7.48,Europe,0.917
+Sweden,SWE,2008,7.82,Europe,0.913
+Sweden,SWE,2009,9.6,Europe,0.912
+Sweden,SWE,2010,7.67,Europe,0.918
+Sweden,SWE,2011,7.53,Europe,0.92
+Sweden,SWE,2012,7.83,Europe,0.92
+Sweden,SWE,2013,7.44,Europe,0.94
+Sweden,SWE,2014,7.16,Europe,0.943
+Sweden,SWE,2015,6.72,Europe,0.945
+Sweden,SWE,2016,6.48,Europe,0.947
+Sweden,SWE,2017,6.15,Europe,0.949
+Sweden,SWE,2018,6.02,Europe,0.95
+Sweden,SWE,2019,5.48,Europe,0.955
+Sweden,SWE,2020,6.46,Europe,0.951
+Switzerland,CHE,2000,5.76,Europe,0.892
+Switzerland,CHE,2001,6.24,Europe,0.895
+Switzerland,CHE,2002,6.7,Europe,0.896
+Switzerland,CHE,2003,8.63,Europe,0.901
+Switzerland,CHE,2004,7.98,Europe,0.906
+Switzerland,CHE,2005,8.67,Europe,0.909
+Switzerland,CHE,2006,8.57,Europe,0.918
+Switzerland,CHE,2007,7.86,Europe,0.926
+Switzerland,CHE,2008,8.03,Europe,0.934
+Switzerland,CHE,2009,8.44,Europe,0.942
+Switzerland,CHE,2010,8.45,Europe,0.945
+Switzerland,CHE,2011,7.91,Europe,0.946
+Switzerland,CHE,2012,8.8,Europe,0.949
+Switzerland,CHE,2013,9.58,Europe,0.952
+Switzerland,CHE,2014,9.11,Europe,0.956
+Switzerland,CHE,2015,9.35,Europe,0.957
+Switzerland,CHE,2016,8.67,Europe,0.959
+Switzerland,CHE,2017,8.13,Europe,0.96
+Switzerland,CHE,2018,7.93,Europe,0.962
+Switzerland,CHE,2019,7.71,Europe,0.965
+Switzerland,CHE,2020,8.62,Europe,0.963
+Tajikistan,TJK,2003,31.91,Asia,0.587
+Tajikistan,TJK,2007,38.32,Asia,0.625
+Tajikistan,TJK,2009,42.2,Asia,0.634
+Tanzania,TZA,2001,12.15,Africa,0.422
+Tanzania,TZA,2005,9.01,Africa,0.465
+Tanzania,TZA,2006,9.01,Africa,0.477
+Tanzania,TZA,2010,14.87,Africa,0.513
+Tanzania,TZA,2012,10.94,Africa,0.519
+Tanzania,TZA,2014,14.93,Africa,0.521
+Tanzania,TZA,2020,14.35,Africa,0.554
+Thailand,THA,2000,10.44,Asia,0.657
+Thailand,THA,2007,10.15,Asia,0.721
+Thailand,THA,2009,13.71,Asia,0.725
+Thailand,THA,2010,12.52,Asia,0.742
+Thailand,THA,2011,12.55,Asia,0.747
+Thailand,THA,2012,12.85,Asia,0.75
+Thailand,THA,2013,14.37,Asia,0.752
+Thailand,THA,2014,13.32,Asia,0.784
+Thailand,THA,2015,13.59,Asia,0.788
+Thailand,THA,2016,14.97,Asia,0.792
+Thailand,THA,2017,15.59,Asia,0.794
+Thailand,THA,2018,14.78,Asia,0.796
+Thailand,THA,2019,14.88,Asia,0.8
+Thailand,THA,2020,15.13,Asia,0.798
+Togo,TGO,2006,9.81,Africa,0.465
+Togo,TGO,2011,11.23,Africa,0.495
+Togo,TGO,2015,17.76,Africa,0.523
+Togo,TGO,2017,25.08,Africa,0.534
+Tonga,TON,2018,27.92,Oceania,0.759
+Trinidad and Tobago,TTO,2013,52.05,North America,0.802
+Trinidad and Tobago,TTO,2019,14.61,North America,0.805
+Trinidad and Tobago,TTO,2020,17.06,North America,0.8
+Tunisia,TUN,2010,25.23,Africa,0.717
+Tunisia,TUN,2014,31.5,Africa,0.725
+Turkey,TUR,2000,39.65,Asia,0.669
+Turkey,TUR,2001,40.43,Asia,0.675
+Turkey,TUR,2002,41.14,Asia,0.685
+Turkey,TUR,2003,41.4,Asia,0.691
+Turkey,TUR,2004,42.56,Asia,0.696
+Turkey,TUR,2005,42.56,Asia,0.701
+Turkey,TUR,2006,38.55,Asia,0.711
+Turkey,TUR,2007,39.22,Asia,0.719
+Turkey,TUR,2008,37.02,Asia,0.721
+Turkey,TUR,2009,34.94,Asia,0.728
+Turkey,TUR,2010,32.29,Asia,0.75
+Turkey,TUR,2011,29.56,Asia,0.764
+Turkey,TUR,2012,28.72,Asia,0.772
+Turkey,TUR,2013,25.53,Asia,0.802
+Turkey,TUR,2014,24.79,Asia,0.813
+Turkey,TUR,2015,23.89,Asia,0.821
+Turkey,TUR,2016,23.95,Asia,0.826
+Turkey,TUR,2017,24.18,Asia,0.833
+Turkey,TUR,2018,24.41,Asia,0.838
+Turkey,TUR,2019,26.02,Asia,0.841
+Turkey,TUR,2020,28.32,Asia,0.838
+Tuvalu,TUV,2016,34.26,Oceania,0.664
+Tuvalu,TUV,2017,45.54,Oceania,0.668
+Uganda,UGA,2009,6.95,Africa,0.509
+Uganda,UGA,2012,14.53,Africa,0.526
+Uganda,UGA,2013,5.91,Africa,0.532
+Uganda,UGA,2017,19.2,Africa,0.557
+Ukraine,UKR,2014,19.98,Europe,0.788
+Ukraine,UKR,2015,17.63,Europe,0.778
+Ukraine,UKR,2016,18.26,Europe,0.78
+Ukraine,UKR,2017,16.47,Europe,0.785
+United Kingdom,GBR,2004,5.45,Europe,0.897
+United Kingdom,GBR,2005,8.42,Europe,0.903
+United Kingdom,GBR,2006,8.55,Europe,0.902
+United Kingdom,GBR,2007,11.9,Europe,0.905
+United Kingdom,GBR,2008,12.09,Europe,0.91
+United Kingdom,GBR,2009,13.22,Europe,0.915
+United Kingdom,GBR,2010,13.62,Europe,0.921
+United Kingdom,GBR,2011,14.24,Europe,0.916
+United Kingdom,GBR,2012,13.88,Europe,0.917
+United Kingdom,GBR,2013,13.24,Europe,0.931
+United Kingdom,GBR,2014,11.86,Europe,0.932
+United Kingdom,GBR,2015,11.05,Europe,0.931
+United Kingdom,GBR,2016,10.89,Europe,0.934
+United Kingdom,GBR,2017,10.31,Europe,0.937
+United Kingdom,GBR,2018,10.45,Europe,0.936
+United Kingdom,GBR,2019,10.52,Europe,0.941
+United States,USA,2000,12.39,North America,0.895
+United States,USA,2001,12.94,North America,0.897
+United States,USA,2002,13.43,North America,0.898
+United States,USA,2003,13.61,North America,0.9
+United States,USA,2004,13.14,North America,0.905
+United States,USA,2005,13.15,North America,0.907
+United States,USA,2006,12.46,North America,0.911
+United States,USA,2007,12.29,North America,0.914
+United States,USA,2008,13.03,North America,0.914
+United States,USA,2009,15.03,North America,0.915
+United States,USA,2010,15.23,North America,0.919
+United States,USA,2011,14.41,North America,0.92
+United States,USA,2012,13.91,North America,0.923
+United States,USA,2013,14.38,North America,0.925
+United States,USA,2014,13.39,North America,0.926
+United States,USA,2015,12.44,North America,0.928
+United States,USA,2016,12.02,North America,0.929
+United States,USA,2017,10.97,North America,0.931
+United States,USA,2018,10.92,North America,0.934
+United States,USA,2019,10.41,North America,0.936
+United States,USA,2020,13.89,North America,0.925
+Uruguay,URY,2000,22.99,South America,0.764
+Uruguay,URY,2001,21.1,South America,0.771
+Uruguay,URY,2002,22.47,South America,0.775
+Uruguay,URY,2003,22.01,South America,0.78
+Uruguay,URY,2004,19.66,South America,0.779
+Uruguay,URY,2005,19.25,South America,0.778
+Uruguay,URY,2006,20.55,South America,0.777
+Uruguay,URY,2007,19.66,South America,0.78
+Uruguay,URY,2008,18.79,South America,0.783
+Uruguay,URY,2009,17.85,South America,0.787
+Uruguay,URY,2010,18.12,South America,0.796
+Uruguay,URY,2011,17.16,South America,0.801
+Uruguay,URY,2012,17.73,South America,0.804
+Uruguay,URY,2013,18.04,South America,0.812
+Uruguay,URY,2014,18.15,South America,0.816
+Uruguay,URY,2015,18.73,South America,0.818
+Uruguay,URY,2016,18.68,South America,0.821
+Uruguay,URY,2017,17.87,South America,0.827
+Uruguay,URY,2018,17.95,South America,0.826
+Uruguay,URY,2019,17.58,South America,0.83
+Vanuatu,VUT,2006,24.24,Oceania,0.567
+Vanuatu,VUT,2009,26.33,Oceania,0.579
+Vanuatu,VUT,2010,31.85,Oceania,0.582
+Vanuatu,VUT,2019,34.5,Oceania,0.622
+Vanuatu,VUT,2020,47.53,Oceania,0.617
+Venezuela,VEN,2005,25.5,South America,0.728
+Venezuela,VEN,2006,24.45,South America,0.736
+Venezuela,VEN,2007,23.39,South America,0.753
+Venezuela,VEN,2008,23.49,South America,0.759
+Venezuela,VEN,2009,20.85,South America,0.76
+Venezuela,VEN,2010,18.8,South America,0.764
+Venezuela,VEN,2011,18.91,South America,0.77
+Venezuela,VEN,2012,19.63,South America,0.772
+Venezuela,VEN,2016,20.25,South America,0.761
+Venezuela,VEN,2017,22.85,South America,0.749
+Venezuela,VEN,2020,37.13,South America,0.699
+Vietnam,VNM,2007,10.67,Asia,0.664
+Vietnam,VNM,2009,10.27,Asia,0.679
+Vietnam,VNM,2010,8.24,Asia,0.686
+Vietnam,VNM,2011,8.29,Asia,0.693
+Vietnam,VNM,2012,9.84,Asia,0.698
+Vietnam,VNM,2013,10.58,Asia,0.704
+Vietnam,VNM,2014,10.54,Asia,0.711
+Vietnam,VNM,2015,10.99,Asia,0.717
+Vietnam,VNM,2016,10.92,Asia,0.723
+Vietnam,VNM,2017,11.12,Asia,0.729
+Vietnam,VNM,2018,10.09,Asia,0.737
+Vietnam,VNM,2019,13.24,Asia,0.744
+Vietnam,VNM,2020,14.18,Asia,0.755
+Yemen,YEM,2014,44.77,Asia,0.502
+Zambia,ZMB,2008,12.94,Africa,0.514
+Zambia,ZMB,2017,42.83,Africa,0.57
+Zambia,ZMB,2018,32.83,Africa,0.575
+Zambia,ZMB,2019,32.54,Africa,0.578
+Zambia,ZMB,2020,31.05,Africa,0.578
+Zimbabwe,ZWE,2011,17.26,Africa,0.529
+Zimbabwe,ZWE,2014,16.56,Africa,0.56
+Zimbabwe,ZWE,2019,29.37,Africa,0.584
