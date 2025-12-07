@@ -1,0 +1,170 @@
+---
+title: "SDG 8, Target 1 Analysis"
+author: "Group C7"
+output: pdf_document
+---
+
+# Introduction : Target 1
+
+Target 1 : Sustain per capita economic growth in accordance with national circumstances and, in particular, at least 7 per cent gross domestic product growth per annum in the least developed countries.
+
+# Data Loading and Preparation
+
+(Here we will load: continents-according-to-our-world-in-data.csv, gdp-per-capita-worldbank.csv, Also, create a dataframe of all the 44 UN designated LDCs, Dec 2024 Compute GDP per Capita growth and compile all the information into one database)
+
+```{r preparation, message=FALSE}
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+library(readr)
+
+continents_according_to_our_world_in_data <- read.csv("continents-according-to-our-world-in-data.csv",
+                                                    stringsAsFactors = F) %>% select(-Year)%>%rename(country = Entity)
+  
+ldcs <- data.frame("Angola", "Benin", "Burkina Faso", "Burundi", "Central African Republic", "Chad", "Comoros", "Democratic Republic of Congo", "Djibouti", "Eritrea", "Ethiopia", "Gambia", "Guinea", "Guinea-Bissau", "Lesotho", "Liberia", "Madagascar", "Malawi", "Mali", "Mauritania", "Mozambique", "Niger", "Rwanda", "Senegal", "Sierra Leone", "Somalia", "South Sudan", "Sudan", "Togo", "Uganda", "Tanzania", "Zambia", "Afghanistan", "Bangladesh", "Cambodia", "Laos", "Myanmar", "Nepal", "East Timor", "Yemen", "Haiti", "Kiribati", "Solomon Islands", "Tuvalu")%>%
+  gather()%>% select(-1)%>% rename( `country` = `value`) %>% mutate (ldc = TRUE)
+
+ldc_continents <- left_join(continents_according_to_our_world_in_data, ldcs)
+
+gdp_per_capita_worldbank <- read.csv ("gdp-per-capita-worldbank.csv",
+                                      stringsAsFactors = F)%>%
+  rename(`GDP per Capita` = `GDP.per.capita..PPP..constant.2017.international...`)%>%
+  arrange(Entity, Year) %>%
+  group_by(Entity) %>%
+  mutate(
+    gdp_prev      = lag(`GDP per Capita`),
+    `GDP per Capita growth`    = (`GDP per Capita` - gdp_prev) * 100/ gdp_prev) %>%
+  ungroup()%>%
+  select (-gdp_prev)%>%
+  rename(country = Entity)%>%
+  left_join(ldc_continents)
+```
+
+# Target 1 Analysis — GDP per Capita Growth
+
+(Compute yearly growth % for each continent.)
+
+```{r gdp-growth-by-continent, echo=FALSE}
+gdp_growth_plot <- gdp_per_capita_worldbank %>%
+  group_by(Continent, Year) %>%
+  summarise(avg_growth = mean(`GDP per Capita growth`, na.rm = TRUE))%>%
+  drop_na()%>%
+  ggplot(aes(x = `Year`, y = `avg_growth`, colour = Continent)) +
+  geom_line(aes(group = Continent), linewidth = 1)+
+  xlab("Year") +
+  theme(axis.text.y = element_text)+
+  ylab("GDP per Capita growth rate (%) ") +
+  scale_colour_manual(values = c("lightblue", "violet", "lightpink", "turquoise", "lightgreen", "orange"))+
+  ggtitle("Average annual GDP per Capita Growth per continent")+
+  theme_minimal()
+print(gdp_growth_plot)  
+
+```
+
+# Target 1 Analysis — GDP per Capita Growth per continent
+
+(split the gdp per growth into different dataframes per continent, and create an average growth for all the LDCs in Africa)
+
+```{r LDC-GDPgrowth-per-continent-preparation, echo=FALSE}
+
+gdp_growth_only_ldc_asia <- gdp_per_capita_worldbank %>%
+  filter(Continent == "Asia")
+gdp_growth_only_ldc_africa <- gdp_per_capita_worldbank %>%
+  filter(Continent == "Africa")
+gdp_growth_only_ldc_northamerica <- gdp_per_capita_worldbank %>%
+  filter(Continent == "North America")
+gdp_growth_only_ldc_oceania <- gdp_per_capita_worldbank %>%
+  filter(Continent == "Oceania")
+
+africa_grouped <- gdp_growth_only_ldc_africa%>%
+  drop_na()%>%
+  group_by(Year) %>%
+  summarise(mean_growth = mean(`GDP per Capita growth`, na.rm = TRUE))
+
+
+```
+
+# Target 1 Analysis — growth of LDCs per continent
+
+(plot the graphs for the LDCs of each continent. There is an extra graph with the average growth rate for all the LDCs in Africa since there are 30 LDCs in Africa and the graph is quite messy. The red dashed line indicates the 7 percent growth target.)
+
+```{r LDC-GDP-growth-by-continent-plots, echo=FALSE}
+gdp_growth_only_ldc_asia_plot <- gdp_growth_only_ldc_asia %>%
+  filter(ldc == TRUE)%>%
+  ggplot(aes(x = `Year`, y = `GDP per Capita growth`, colour = country)) +
+  geom_line(aes(group = country), linewidth = 1)+
+  geom_hline(yintercept = 7, colour = "red", linewidth = 1, linetype = "dashed")+
+  xlab("Year") +
+  geom_text(aes(2022, 7, label = '7%'), vjust = -1, colour = "red")+
+  theme(axis.text.y = element_text)+
+  ylab("GDP growth rate (%) ") +
+  scale_colour_manual(values = c("lightblue", "violet", "lightpink", "turquoise", "lightgreen", "orange", "darkseagreen", "deeppink2"))+
+  ggtitle("Average annual GDP per Capita Growth for Asia's LDCs")+
+  theme_minimal()
+
+print(gdp_growth_only_ldc_asia_plot)
+
+
+
+
+gdp_growth_only_ldc_africa_plot <- gdp_growth_only_ldc_africa %>%
+  filter(ldc == TRUE)%>%
+  ggplot(aes(x = `Year`, y = `GDP per Capita growth`, colour = country)) +
+  geom_line(aes(group = country))+
+  geom_hline(yintercept = 7, colour = "red", linewidth = 1, linetype = "dashed")+
+  xlab("Year") +
+  geom_text(aes(2022, 7, label = '7%'), vjust = -1, colour = "red")+
+  theme(axis.text.y = element_text)+
+  ylab("GDP growth rate (%) ") +
+  scale_colour_manual(values = c("lightblue", "violet", "lightpink", "turquoise", "lightgreen", "orange", "darkblue", "darkgreen", "darkred",
+                                 "darkkhaki", "grey", "beige", "magenta", "darkslateblue", "deeppink4", "chocolate4", "coral", "deepskyblue4", "darkorchid3",
+                                 "darkseagreen2", "darkseagreen4", "darkgoldenrod2", "cyan3", "cornflowerblue", "blueviolet", "azure3", "burlywood", "cadetblue", "deeppink2", "darkolivegreen3"))+
+  ggtitle("Average annual GDP per Capita Growth for Africa's LDCs")+
+  theme_minimal()
+
+print(gdp_growth_only_ldc_africa_plot)
+
+africa_grouped_plot <- africa_grouped %>%
+  ggplot(aes(x = `Year`, y = `mean_growth`)) +
+  geom_line(colour = "darkseagreen", linewidth = 1)+
+  geom_hline(yintercept = 7, colour = "red", linewidth = 1, linetype = "dashed")+
+  xlab("Year") +
+  geom_text(aes(2022, 7, label = '7%'), vjust = 1.5, colour = "red")+
+  theme(axis.text.y = element_text)+
+  ylab("GDP growth rate (%) ") +
+  ggtitle("Average annual GDP per Capita Growth for Africa's LDCs")+
+  theme_minimal()
+print(africa_grouped_plot)
+
+
+
+gdp_growth_only_ldc_northamerica_plot <- gdp_growth_only_ldc_northamerica %>%
+  filter(ldc == TRUE)%>%
+  ggplot(aes(x = `Year`, y = `GDP per Capita growth`, colour = country)) +
+  geom_line(aes(group = country), linewidth = 1)+
+  geom_hline(yintercept = 7, colour = "red", linewidth = 1, linetype = "dashed")+
+  xlab("Year") +
+  geom_text(aes(2022, 7, label = '7%'), vjust = 1.5, colour = "red")+
+  theme(axis.text.y = element_text)+
+  ylab("GDP growth rate (%) ") +
+  scale_colour_manual(values = c("lightblue"))+
+  ggtitle("Average annual GDP per Capita Growth for North America's LDCs")+
+  theme_minimal()
+print(gdp_growth_only_ldc_northamerica_plot)
+
+
+gdp_growth_only_ldc_oceania_plot <- gdp_growth_only_ldc_oceania %>%
+  filter(ldc == TRUE)%>%
+  ggplot(aes(x = `Year`, y = `GDP per Capita growth`, colour = country)) +
+  geom_line(aes(group = country), linewidth = 1)+
+  geom_hline(yintercept = 7, colour = "red", linewidth = 1, linetype = "dashed")+
+  geom_text(aes(2022, 7, label = '7%'), vjust = -1, colour = "red")+
+  xlab("Year") +
+  theme(axis.text.y = element_text)+
+  ylab("GDP growth rate (%) ") +
+  scale_colour_manual(values = c("lightblue", "violet", "lightpink"))+
+  ggtitle("Average annual GDP per Capita Growth for Oceania's LDCs")+
+  theme_minimal()
+print(gdp_growth_only_ldc_oceania_plot)
+
+```
