@@ -2,15 +2,12 @@ library(readr)
 library(dplyr)
 library(ggplot2)
 
-# 0.1 Load the merged dataset
-# Make sure this filename matches what you saved
+# Loading the merged dataset
 df <- read_csv("youth_continents_hdi_2000_2020.csv")
 
-# If your NEET column is not yet called 'share_neet', uncomment this:
-# df <- df %>%
 #   rename(share_neet = `Share of youth not in education, employment or training, total (% of youth population)`)
 
-# 0.2 Create HDI tiers and 2-group classification
+# Creating HDI tiers and 2-group classification
 df <- df %>%
   mutate(
     HDI_tier = case_when(
