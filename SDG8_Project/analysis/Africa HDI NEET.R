@@ -1,29 +1,37 @@
+## Purpose: Plot African youth NEET trends split by HDI group (supplemental context for SDG 8.6)
+## Inputs: youth_continents_hdi_2000_2020.csv (NEET + continent + HDI merged dataset)
+## Outputs: ggplot showing average NEET% by HDI grouping over time (viewed interactively or saved via ggsave)
+
 library(readr)
 library(dplyr)
 library(ggplot2)
 
-# Load merged dataset containing NEET rates, HDI values, and continent labels
+# Load merged NEET + continent + HDI dataset (produced upstream from the provided CSVs + HDI file).
 df <- read_csv("youth_continents_hdi_2000_2020.csv")
 
+# If the NEET column name differs, rename to share_neet using the line below.
+# df <- df %>%
+#   rename(share_neet = `Share of youth not in education, employment or training, total (% of youth population)`)
+
+# Derive HDI tiers and a 2-bucket HDI grouping, then drop rows lacking HDI.
 df <- df %>%
-# Create HDI tiers and broader HDI groups for comparing NEET outcomes
   mutate(
     HDI_tier = case_when(
-      HDI >= 0.800                    ~ "Very High",
-      HDI >= 0.700 & HDI < 0.800      ~ "High",
-      HDI >= 0.550 & HDI < 0.700      ~ "Medium",
-      HDI < 0.550                     ~ "Low",
-      TRUE                            ~ NA_character_
+      HDI >= 0.800               ~ "Very High",
+      HDI >= 0.700 & HDI < 0.800 ~ "High",
+      HDI >= 0.550 & HDI < 0.700 ~ "Medium",
+      HDI < 0.550                ~ "Low",
+      TRUE                       ~ NA_character_
     ),
     HDI_group2 = case_when(
-      HDI_tier %in% c("Very High", "High")   ~ "High & Very High HDI",
-      HDI_tier %in% c("Medium", "Low")       ~ "Medium & Low HDI",
-      TRUE                                   ~ NA_character_
+      HDI_tier %in% c("Very High", "High") ~ "High & Very High HDI",
+      HDI_tier %in% c("Medium", "Low")     ~ "Medium & Low HDI",
+      TRUE                                 ~ NA_character_
     )
   ) %>%
-  filter(!is.na(HDI_group2))   #remove rows without valid HDI grouping
+  filter(!is.na(HDI_group2))
 
-# Compute annual average NEET for Africa by HDI group
+# Filter to Africa and compute mean NEET by year and HDI group.
 africa <- df %>%
   filter(Continent == "Africa") %>%
   group_by(Year, HDI_group2) %>%
@@ -32,7 +40,7 @@ africa <- df %>%
     .groups = "drop"
   )
 
-# Plot NEET trends over time for African HDI groups
+# Plot NEET trends by HDI grouping (use ggsave(...) to write to file if needed).
 ggplot(africa, aes(x = Year, y = mean_neet, colour = HDI_group2)) +
   geom_line(linewidth = 1) +
   geom_point(size = 1.3) +
@@ -44,4 +52,3 @@ ggplot(africa, aes(x = Year, y = mean_neet, colour = HDI_group2)) +
     colour = "HDI group"
   ) +
   theme_minimal()
-

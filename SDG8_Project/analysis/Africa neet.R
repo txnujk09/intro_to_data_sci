@@ -1,12 +1,20 @@
+## Purpose: Plot average African youth NEET rate over time (SDG 8.6)
+## Inputs: youth_continents_hdi_2000_2020.csv (NEET + continent + HDI merged dataset)
+## Outputs: ggplot of continent-level mean NEET% by year (viewed interactively or saved via ggsave)
+
 library(readr)
 library(dplyr)
 library(ggplot2)
 
-#Load dataset containing NEET values merged with continent labels and HDI
+# Load merged NEET + continent + HDI dataset (built upstream from the provided CSVs + HDI file).
 df <- readr::read_csv("youth_continents_hdi_2000_2020.csv")
 
+# If your NEET column is named differently, standardize it to share_neet using:
+# df <- df %>%
+#   rename(share_neet = `Share of youth not in education, employment or training, total (% of youth population)`)
+
+# Compute mean NEET for Africa by year.
 africa <- df %>%
-#subset Africa and compute yearly average NEET for the continent
   filter(Continent == "Africa") %>%
   group_by(Year) %>%
   summarise(
@@ -14,7 +22,7 @@ africa <- df %>%
     .groups = "drop"
   )
 
-# Plot Africa's average NEET trend over 2000–2020
+# Plot the continent-level NEET trend (use ggsave(...) to write to file if needed).
 ggplot(africa, aes(x = Year, y = mean_neet)) +
   geom_line(linewidth = 1) +
   geom_point(size = 1.3) +
