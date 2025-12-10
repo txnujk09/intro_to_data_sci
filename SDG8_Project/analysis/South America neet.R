@@ -6,6 +6,7 @@ library(ggplot2)
 df <- readr::read_csv("youth_continents_hdi_2000_2020.csv")
 
 south_america <- df %>%
+# subset South America and compute yearly average NEET for the continent
   filter(Continent == "South America") %>%
   group_by(Year) %>%
   summarise(
@@ -13,6 +14,7 @@ south_america <- df %>%
     .groups = "drop"
   )
 
+# Plot South America's average NEET trend over 2000–2020
 ggplot(south_america, aes(x = Year, y = mean_neet)) +
   geom_line(linewidth = 1) +
   geom_point(size = 1.3) +
