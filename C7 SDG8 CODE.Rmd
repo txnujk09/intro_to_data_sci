@@ -1,0 +1,1010 @@
+---
+title: "SDG8"
+author: "C7"
+date: "2025-12-10"
+output:
+  word_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
+```
+
+# Introduction : Target 1
+
+Target 1 : Sustain per capita economic growth in accordance with national circumstances and, in particular, at least 7 per cent gross domestic product growth per annum in the least developed countries.
+
+# Data Loading and Preparation
+
+Here we will load: continents-according-to-our-world-in-data.csv, gdp-per-capita-worldbank.csv, Also, create a dataframe of all the 44 UN designated LDCs, Dec 2024 Compute GDP per Capita growth and compile all the information into one database. Also compute an average growth for all the African LDCs.
+
+```{r preparation, message=FALSE}
+library(dplyr)
+library(tidyverse)
+library(ggplot2)
+library(readr)
+
+continents_according_to_our_world_in_data <- read.csv("continents-according-to-our-world-in-data.csv",
+                                                    stringsAsFactors = F) %>% select(-Year)%>%rename(country = Entity)
+  
+ldcs <- data.frame("Angola", "Benin", "Burkina Faso", "Burundi", "Central African Republic", "Chad", "Comoros", "Democratic Republic of Congo", "Djibouti", "Eritrea", "Ethiopia", "Gambia", "Guinea", "Guinea-Bissau", "Lesotho", "Liberia", "Madagascar", "Malawi", "Mali", "Mauritania", "Mozambique", "Niger", "Rwanda", "Senegal", "Sierra Leone", "Somalia", "South Sudan", "Sudan", "Togo", "Uganda", "Tanzania", "Zambia", "Afghanistan", "Bangladesh", "Cambodia", "Laos", "Myanmar", "Nepal", "East Timor", "Yemen", "Haiti", "Kiribati", "Solomon Islands", "Tuvalu")%>%
+  gather()%>% select(-1)%>% rename( `country` = `value`) %>% mutate (ldc = TRUE)
+
+ldc_continents <- left_join(continents_according_to_our_world_in_data, ldcs)
+
+gdp_per_capita_worldbank <- read.csv ("gdp-per-capita-worldbank.csv",
+                                      stringsAsFactors = F)%>%
+  rename(`GDP per Capita` = `GDP.per.capita..PPP..constant.2017.international...`)%>%
+  arrange(Entity, Year) %>%
+  group_by(Entity) %>%
+  mutate(
+    gdp_prev      = lag(`GDP per Capita`),
+    `GDP per Capita growth`    = (`GDP per Capita` - gdp_prev) * 100/ gdp_prev) %>%
+  ungroup()%>%
+  select (-gdp_prev)%>%
+  rename(country = Entity)%>%
+  left_join(ldc_continents)
+
+
+africa_grouped <- gdp_per_capita_worldbank%>%
+  filter(Continent == "Africa")%>%
+  drop_na()%>%
+  group_by(Year) %>%
+  summarise(mean_growth = mean(`GDP per Capita growth`, na.rm = TRUE))
+```
+
+# Target 1 Analysis — GDP per Capita Growth
+
+Compute yearly growth % for each continent.
+
+```{r gdp-growth-by-continent, echo=TRUE, message=FALSE, warning=FALSE}
+gdp_growth_plot <- gdp_per_capita_worldbank %>%
+  group_by(Continent, Year) %>%
+  summarise(avg_growth = mean(`GDP per Capita growth`, na.rm = TRUE))%>%
+  drop_na()%>%
+  ggplot(aes(x = `Year`, y = `avg_growth`, colour = Continent)) +
+  geom_line(aes(group = Continent), linewidth = 1)+
+  xlab("Year") +
+  theme(axis.text.y = element_text)+
+  ylab("GDP per Capita growth rate (%) ") +
+  scale_colour_manual(values = c("lightblue", "violet", "lightpink", "turquoise", "lightgreen", "orange"))+
+  ggtitle("Average annual GDP per Capita Growth per continent")+
+  theme_minimal()
+print(gdp_growth_plot)  
+
+```
+
+# GDP Per Capita Levels by Continent Line Plot
+
+# Purpose: 
+Plot GDP per capita levels by continent (SDG 8.1 context)
+
+# Inputs: 
+data/gdp-per-capita-worldbank.csv,
+data/continents-according-to-our-world-in-data.csv
+
+# Outputs: 
+figures/gdp_levels_continent.png (continent averages + country traces)
+
+# Data Loading and Preparation
+```{r}
+library(tidyverse)
+
+# File paths (relative to project root)
+gdp_path <- "../data/gdp-per-capita-worldbank.csv"
+continents_path <- "../data/continents-according-to-our-world-in-data.csv"
+
+# Ensure figures directory exists
+dir.create("figures", showWarnings = FALSE)
+
+# Load and clean GDP per capita data
+gdp_clean <- readr::read_csv(gdp_path, show_col_types = FALSE) %>%
+  rename(
+    country = Entity,
+    code = Code,
+    year = Year,
+    gdp_pc = `GDP per capita, PPP (constant 2017 international $)`
+  ) %>%
+  mutate(
+    year = as.numeric(year),
+    gdp_pc = as.numeric(gdp_pc)
+  ) %>%
+  select(country, code, year, gdp_pc) %>%
+  drop_na(country)
+
+# Load continent lookup and keep one continent per country
+continents_clean <- readr::read_csv(continents_path, show_col_types = FALSE) %>%
+  rename(
+    country = Entity,
+    code = Code,
+    year = Year,
+    continent = Continent
+  ) %>%
+  mutate(
+    country = str_trim(country),
+    continent = str_trim(continent)
+  ) %>%
+  select(country, code, continent) %>%
+  distinct(country, .keep_all = TRUE) %>%
+  drop_na(continent)
+
+# Merge GDP with continent info
+gdp_all <- gdp_clean %>%
+  left_join(continents_clean %>% select(country, continent), by = "country") %>%
+  rename(gdp_per_capita = gdp_pc) %>%
+  filter(!is.na(continent))
+
+```
+
+
+# GDP Per Capita Levels by Continent
+
+
+```{r}
+# Generate the plot (country traces in grey, continent means colored)
+gdp_levels_plot <- gdp_all %>%
+  # Plot individual country lines (thin, grey, transparent)
+  ggplot(aes(x = year, y = gdp_per_capita)) +
+  geom_line(aes(group = country), color = "grey", alpha = 0.2, linewidth = 0.3) +
+  # Add continent mean lines (thicker, colored)
+  geom_line(
+    aes(x = year, y = gdp_per_capita, color = continent, group = continent),
+    data = gdp_all %>%
+      group_by(continent, year) %>%
+      summarise(gdp_per_capita = mean(gdp_per_capita, na.rm = TRUE), .groups = "drop"),
+    linewidth = 1.2
+  ) +
+  labs(
+    title = "GDP Per Capita Levels by Continent",
+    x = "Year",
+    y = "GDP Per Capita (USD)",
+    color = "Continent"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    legend.position = "bottom"
+  )
+
+# Save the figure
+ggsave(
+  "figures/gdp_levels_continent.png",
+  plot = gdp_levels_plot,
+  width = 12,
+  height = 7,
+  dpi = 300
+)
+
+message("Plot saved successfully to: figures/gdp_levels_continent.png")
+print(gdp_levels_plot)
+```
+
+
+
+# GDP Growth Rates by Country by Year Chloropleth 
+
+
+# Purpose: 
+Create world maps of GDP per capita growth for SDG 8.1 (2015–2020) with 7% benchmark coloring.
+
+# Inputs: 
+data/gdp-per-capita-worldbank.csv data/continents-according-to-our-world-in-data.csv
+
+# Outputs: 
+PNG maps saved to analysis/figures/gdp_growth_map_<year>.png
+
+
+
+#Data Loading and Preparation
+
+```{r}
+library(tidyverse)
+library(sf)
+library(rnaturalearth)
+
+# File paths (relative to project root)
+gdp_path <- "../data/gdp-per-capita-worldbank.csv"
+continents_path <- "../data/continents-according-to-our-world-in-data.csv"
+
+# Read and clean GDP data (long format already)
+gdp_clean <- read_csv(gdp_path, show_col_types = FALSE) %>%
+  rename(
+    country = Entity,
+    code = Code,
+    year = Year,
+    gdp_pc = `GDP per capita, PPP (constant 2017 international $)`
+  ) %>%
+  mutate(
+    year = as.numeric(year),
+    gdp_pc = as.numeric(gdp_pc)
+  ) %>%
+  select(country, code, year, gdp_pc) %>%
+  drop_na(country)
+
+# Read continent lookup and keep one continent per country
+continents_clean <- read_csv(continents_path, show_col_types = FALSE) %>%
+  rename(
+    country = Entity,
+    code = Code,
+    year = Year,
+    continent = Continent
+  ) %>%
+  mutate(
+    country = str_trim(country),
+    continent = str_trim(continent)
+  ) %>%
+  select(country, code, continent) %>%
+  distinct(country, .keep_all = TRUE) %>%
+  drop_na(continent)
+
+# Compute year-over-year GDP per capita growth per country
+gdp_growth <- gdp_clean %>%
+  group_by(country) %>%
+  arrange(year, .by_group = TRUE) %>%
+  mutate(gdp_growth = 100 * (gdp_pc - lag(gdp_pc)) / lag(gdp_pc)) %>%
+  ungroup() %>%
+  left_join(continents_clean %>% select(country, continent), by = "country")
+
+# Years to plot
+years_to_plot <- 2015:2020
+
+# Country geometries (ISO A3 codes align with gdp_clean$code)
+world <- rnaturalearth::ne_countries(scale = "medium", returnclass = "sf") %>%
+  select(iso_a3, geometry)
+
+# Prep growth data for join
+growth_map_data <- gdp_growth %>%
+  filter(year %in% years_to_plot) %>%
+  select(code, country, continent, year, gdp_growth)
+
+
+```
+
+
+
+# Plots 
+
+
+```{r}
+# Output directory for maps (relative to this script)
+out_dir <- "figures"
+dir.create(out_dir, showWarnings = FALSE)
+
+plot_growth_map <- function(target_year) {
+  # Join growth data to shapes for the target year
+  df_year <- world %>%
+    left_join(
+      growth_map_data %>% filter(year == target_year),
+      by = c("iso_a3" = "code")
+    )
+
+  # Map with symmetric red/green scale around 0, squishing beyond +/-7%
+  p <- ggplot(df_year) +
+    geom_sf(aes(fill = gdp_growth), color = "grey80", size = 0.1) +
+    scale_fill_gradient2(
+      low = "darkred",
+      mid = "white",
+      high = "darkgreen",
+      midpoint = 0,
+      limits = c(-7, 7),
+      oob = scales::squish,
+      name = "GDP Growth (%)"
+    ) +
+    labs(
+      title = paste0("GDP Growth Rates by Country (", target_year, ")"),
+      subtitle = "Dark red: growth <= -7%   |   Dark green: growth >= +7%",
+      caption = "Source: World Bank GDP per capita (PPP, constant 2017); year-over-year growth"
+    ) +
+    theme_minimal() +
+    theme(
+      legend.position = "bottom",
+      plot.title = element_text(face = "bold")
+    )
+
+  out_file <- file.path(out_dir, paste0("gdp_growth_map_", target_year, ".png"))
+  ggsave(out_file, p, width = 12, height = 6, dpi = 300)
+  message("Saved: ", out_file)
+  print(p)
+}
+
+invisible(lapply(years_to_plot, plot_growth_map))
+```
+
+
+
+
+
+# Target 1 Analysis — growth of LDCs per continent
+
+Plot the graphs for the LDCs of each continent. 
+There is an extra graph with the average growth rate for all the LDCs in Africa since there are 30 LDCs in Africa and the graph is quite messy. 
+The red dashed line indicates the 7 percent growth target.
+
+```{r LDC-GDP-growth-by-continent-plots, echo=TRUE, message=FALSE, warning=FALSE}
+gdp_growth_only_ldc_asia_plot <- gdp_per_capita_worldbank %>%
+  filter(Continent == "Asia")%>%
+  filter(ldc == TRUE)%>%
+  ggplot(aes(x = `Year`, y = `GDP per Capita growth`, colour = country)) +
+  geom_line(aes(group = country), linewidth = 1)+
+  geom_hline(yintercept = 7, colour = "red", linewidth = 1, linetype = "dashed")+
+  xlab("Year") +
+  geom_text(aes(2022, 7, label = '7%'), vjust = -1, colour = "red")+
+  theme(axis.text.y = element_text)+
+  ylab("GDP growth rate (%) ") +
+  scale_colour_manual(values = c("lightblue", "violet", "lightpink", "turquoise", "lightgreen", "orange", "darkseagreen", "deeppink2"))+
+  ggtitle("Average annual GDP per Capita Growth for Asia's LDCs")+
+  theme_minimal()
+
+print(gdp_growth_only_ldc_asia_plot)
+
+
+
+
+gdp_growth_only_ldc_africa_plot <- gdp_per_capita_worldbank %>%
+  filter(Continent == "Africa")%>%
+  filter(ldc == TRUE)%>%
+  ggplot(aes(x = `Year`, y = `GDP per Capita growth`, colour = country)) +
+  geom_line(aes(group = country))+
+  geom_hline(yintercept = 7, colour = "red", linewidth = 1, linetype = "dashed")+
+  xlab("Year") +
+  geom_text(aes(2022, 7, label = '7%'), vjust = -1, colour = "red")+
+  theme(axis.text.y = element_text)+
+  ylab("GDP growth rate (%) ") +
+  scale_colour_manual(values = c("lightblue", "violet", "lightpink", "turquoise", "lightgreen", "orange", "darkblue", "darkgreen", "darkred",
+                                 "darkkhaki", "grey", "beige", "magenta", "darkslateblue", "deeppink4", "chocolate4", "coral", "deepskyblue4", "darkorchid3",
+                                 "darkseagreen2", "darkseagreen4", "darkgoldenrod2", "cyan3", "cornflowerblue", "blueviolet", "azure3", "burlywood", "cadetblue", "deeppink2", "darkolivegreen3"))+
+  ggtitle("Average annual GDP per Capita Growth for Africa's LDCs")+
+  theme_minimal()
+
+print(gdp_growth_only_ldc_africa_plot)
+
+
+africa_grouped_plot <- africa_grouped %>%
+  ggplot(aes(x = `Year`, y = `mean_growth`)) +
+  geom_line(colour = "darkseagreen", linewidth = 1)+
+  geom_hline(yintercept = 7, colour = "red", linewidth = 1, linetype = "dashed")+
+  xlab("Year") +
+  geom_text(aes(2022, 7, label = '7%'), vjust = 1.5, colour = "red")+
+  theme(axis.text.y = element_text)+
+  ylab("GDP growth rate (%) ") +
+  ggtitle("Average annual GDP per Capita Growth for Africa's LDCs")+
+  theme_minimal()
+
+print(africa_grouped_plot)
+
+
+gdp_growth_only_ldc_northamerica_plot <- gdp_per_capita_worldbank %>%
+  filter(Continent == "North America")%>%
+  filter(ldc == TRUE)%>%
+  ggplot(aes(x = `Year`, y = `GDP per Capita growth`, colour = country)) +
+  geom_line(aes(group = country), linewidth = 1)+
+  geom_hline(yintercept = 7, colour = "red", linewidth = 1, linetype = "dashed")+
+  xlab("Year") +
+  geom_text(aes(2022, 7, label = '7%'), vjust = 1.5, colour = "red")+
+  theme(axis.text.y = element_text)+
+  ylab("GDP growth rate (%) ") +
+  scale_colour_manual(values = c("lightblue"))+
+  ggtitle("Average annual GDP per Capita Growth for North America's LDCs")+
+  theme_minimal()
+print(gdp_growth_only_ldc_northamerica_plot)
+
+
+gdp_growth_only_ldc_oceania_plot <- gdp_per_capita_worldbank %>%
+  filter(Continent == "Oceania")%>%
+  filter(ldc == TRUE)%>%
+  ggplot(aes(x = `Year`, y = `GDP per Capita growth`, colour = country)) +
+  geom_line(aes(group = country), linewidth = 1)+
+  geom_hline(yintercept = 7, colour = "red", linewidth = 1, linetype = "dashed")+
+  geom_text(aes(2022, 7, label = '7%'), vjust = -1, colour = "red")+
+  xlab("Year") +
+  theme(axis.text.y = element_text)+
+  ylab("GDP growth rate (%) ") +
+  scale_colour_manual(values = c("lightblue", "violet", "lightpink"))+
+  ggtitle("Average annual GDP per Capita Growth for Oceania's LDCs")+
+  theme_minimal()
+print(gdp_growth_only_ldc_oceania_plot)
+```
+
+
+# Introduction : Target 2
+
+Target 2 : By 2020, substantially reduce the proportion of youth not in employment, education or training.
+
+
+# Data Loading and Preparation
+
+```{r}
+library(readr)
+library(dplyr)
+library(ggplot2)
+
+# Load raw continent classifications and youth NEET data
+continents_raw <- read_csv("continents-according-to-our-world-in-data.csv")
+youth_raw <- read_csv("youth-not-in-education-employment-training.csv")
+
+# Keep one row per country code
+continents_clean <- continents_raw %>%
+  select(Code, Continent) %>%
+  distinct(Code, .keep_all = TRUE)
+
+# Clean NEET column name for easier use
+youth_clean <- youth_raw %>%
+  rename(
+    `share_neet` = `Share of youth not in education, employment or training, total (% of youth population)`
+  )
+
+# Merge NEET data with continent labels and restrict to 2000–2020, excluding Antarctica
+youth_with_continents <- youth_clean %>%
+  left_join(continents_clean, by = "Code") %>%
+  filter(!is.na(Continent), Continent != "Antarctica") %>%
+  filter(Year >= 2000, Year <= 2020)
+
+# Save cleaned dataset
+write_csv(youth_with_continents, "youth_with_continents_cleaned_2000_2020.csv")
+
+
+# Load NEET dataset
+neet <- readr::read_csv("youth_with_continents_cleaned_2000_2020.csv")
+names(neet)[4] <- "share_neet" 
+
+# Load HDI dataset
+hdi <- readr::read_csv("human-development-index.csv")
+
+hdi <- hdi %>%
+  filter(indicatorCode == "hdi") %>%
+  select(countryIsoCode, year, value)
+
+# Rename for merge compatibility
+hdi <- hdi %>%
+  rename(
+    Code = countryIsoCode,
+    Year = year,
+    HDI = value
+  )
+
+# Merge by country code + year
+merged <- neet %>%
+  left_join(hdi, by = c("Code", "Year"))
+
+# Save merged dataset
+write_csv(merged, "youth_continents_hdi_2000_2020.csv")
+
+# Load merged dataset containing NEET rates, HDI values, and continent labels
+df <- read_csv("youth_continents_hdi_2000_2020.csv")
+
+df <- df %>%
+# Create HDI tiers and broader HDI groups for comparing NEET outcomes
+  mutate(
+    HDI_tier = case_when(
+      HDI >= 0.800                    ~ "Very High",
+      HDI >= 0.700 & HDI < 0.800      ~ "High",
+      HDI >= 0.550 & HDI < 0.700      ~ "Medium",
+      HDI < 0.550                     ~ "Low",
+      TRUE                            ~ NA_character_
+    ),
+    HDI_group2 = case_when(
+      HDI_tier %in% c("Very High", "High")   ~ "High & Very High HDI",
+      HDI_tier %in% c("Medium", "Low")       ~ "Medium & Low HDI",
+      TRUE                                   ~ NA_character_
+    )
+  ) %>%
+  filter(!is.na(HDI_group2))   # drop rows without HDI classification
+
+
+continents <- read.csv("continents-according-to-our-world-in-data.csv",
+                       stringsAsFactors = FALSE)
+
+youth <- read.csv("youth-not-in-education-employment-training.csv",                               stringsAsFactors = FALSE)
+```
+
+
+# Africa Youth NEET (%) by HDI group
+
+
+```{r}
+# Compute annual average NEET for Africa by HDI group
+africa <- df %>%
+  filter(Continent == "Africa") %>%
+  group_by(Year, HDI_group2) %>%
+  summarise(
+    mean_neet = mean(share_neet, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Plot NEET trends over time for African HDI groups
+ggplot(africa, aes(x = Year, y = mean_neet, colour = HDI_group2)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.3) +
+  labs(
+    title = "Africa: Youth NEET (%) by HDI group",
+    subtitle = "High & Very High vs Medium & Low HDI",
+    x = "Year",
+    y = "% of youth NEET",
+    colour = "HDI group"
+  ) +
+  theme_minimal()
+```
+
+
+
+# Asia Youth NEET (%) by HDI group
+
+
+```{r}
+# Compute annual average NEET for Asia by HDI group
+asia <- df %>%
+  filter(Continent == "Asia") %>%
+  group_by(Year, HDI_group2) %>%
+  summarise(
+    mean_neet = mean(share_neet, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Plot NEET trends over time for Asian HDI groups
+ggplot(asia, aes(x = Year, y = mean_neet, colour = HDI_group2)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.3) +
+  labs(
+    title = "Asia: Youth NEET (%) by HDI group",
+    subtitle = "High & Very High vs Medium & Low HDI",
+    x = "Year",
+    y = "% of youth NEET",
+    colour = "HDI group"
+  ) +
+  theme_minimal()
+```
+
+
+# Europe Youth NEET (%) by HDI group
+
+
+```{r}
+# Compute annual average NEET for Europe by HDI group
+europe <- df %>%
+  filter(Continent == "Europe") %>%
+  group_by(Year, HDI_group2) %>%
+  summarise(
+    mean_neet = mean(share_neet, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+#Plot NEET trends over time for European HDI groups
+ggplot(europe, aes(x = Year, y = mean_neet, colour = HDI_group2)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.3) +
+  labs(
+    title = "Europe: Youth NEET (%) by HDI group",
+    subtitle = "High & Very High vs Medium & Low HDI",
+    x = "Year",
+    y = "% of youth NEET",
+    colour = "HDI group"
+  ) +
+  theme_minimal()
+```
+
+
+# North America Youth NEET (%) by HDI group
+
+
+```{r}
+# Compute annual average NEET for North America by HDI group
+north_america <- df %>%
+  filter(Continent == "North America") %>%
+  group_by(Year, HDI_group2) %>%
+  summarise(
+    mean_neet = mean(share_neet, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Plot NEET trends over time for North American HDI groups
+ggplot(north_america, aes(x = Year, y = mean_neet, colour = HDI_group2)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.3) +
+  labs(
+    title = "North America: Youth NEET (%) by HDI group",
+    subtitle = "High & Very High vs Medium & Low HDI",
+    x = "Year",
+    y = "% of youth NEET",
+    colour = "HDI group"
+  ) +
+  theme_minimal()
+```
+
+
+# Oceania Youth NEET (%) by HDI group
+
+
+```{r}
+#Compute annual average NEET for Oceania by HDI group
+oceania <- df %>%
+  filter(Continent == "Oceania") %>%
+  group_by(Year, HDI_group2) %>%
+  summarise(
+    mean_neet = mean(share_neet, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+#Plot NEET trends over time for Oceanic HDI groups
+ggplot(oceania, aes(x = Year, y = mean_neet, colour = HDI_group2)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.3) +
+  labs(
+    title = "Oceania: Youth NEET (%) by HDI group",
+    subtitle = "High & Very High vs Medium & Low HDI",
+    x = "Year",
+    y = "% of youth NEET",
+    colour = "HDI group"
+  ) +
+  theme_minimal()
+```
+
+
+
+# South America Youth NEET (%) by HDI group
+
+
+```{r}
+# Compute annual average NEET for South America by HDI group
+south_america <- df %>%
+  filter(Continent == "South America") %>%
+  group_by(Year, HDI_group2) %>%
+  summarise(
+    mean_neet = mean(share_neet, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Plot NEET trends over time for South American HDI groups
+ggplot(south_america, aes(x = Year, y = mean_neet, colour = HDI_group2)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.3) +
+  labs(
+    title = "South America: Youth NEET (%) by HDI group",
+    subtitle = "High & Very High vs Medium & Low HDI",
+    x = "Year",
+    y = "% of youth NEET",
+    colour = "HDI group"
+  ) +
+  theme_minimal()
+```
+
+
+# Africa Youth NEET (%)
+
+
+```{r}
+
+africa <- df %>%
+#subset Africa and compute yearly average NEET for the continent
+  filter(Continent == "Africa") %>%
+  group_by(Year) %>%
+  summarise(
+    mean_neet = mean(share_neet, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Plot Africa's average NEET trend over 2000–2020
+ggplot(africa, aes(x = Year, y = mean_neet)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.3) +
+  labs(
+    title = "Africa: Youth NEET (%)",
+    x = "Year",
+    y = "% of youth NEET"
+  ) +
+  theme_minimal()
+```
+
+
+# Asia Youth NEET (%)
+
+
+```{r}
+asia <- df %>%
+#subset Asia and compute yearly average NEET for the continent
+  filter(Continent == "Asia") %>%
+  group_by(Year) %>%
+  summarise(
+    mean_neet = mean(share_neet, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Plot Asia's average NEET trend over 2000–2020
+ggplot(asia, aes(x = Year, y = mean_neet)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.3) +
+  labs(
+    title = "Asia: Youth NEET (%)",
+    x = "Year",
+    y = "% of youth NEET"
+  ) +
+  theme_minimal()
+```
+
+
+# Oceania Youth NEET (%)
+
+
+```{r}
+oceania <- df %>%
+# subset Oceania and compute yearly average NEET for the continent
+  filter(Continent == "Oceania") %>%
+  group_by(Year) %>% 
+  summarise(
+    mean_neet = mean(share_neet, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Plot Oceania's average NEET trend over 2000–2020
+ggplot(oceania, aes(x = Year, y = mean_neet)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.3) +
+  labs(
+    title = "Oceania: Youth NEET (%)",
+    x = "Year",
+    y = "% of youth NEET"
+  ) +
+  theme_minimal()
+```
+
+# Europe Youth NEET (%)
+
+```{r}
+europe <- df %>%
+#subset Europe and compute yearly average NEET for the continent
+  filter(Continent == "Europe") %>%
+  group_by(Year) %>%
+  summarise(
+    mean_neet = mean(share_neet, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Plot Europe's average NEET trend over 2000–2020
+ggplot(europe, aes(x = Year, y = mean_neet)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.3) +
+  labs(
+    title = "Europe: Youth NEET (%)",
+    x = "Year",
+    y = "% of youth NEET"
+  ) +
+  theme_minimal()
+```
+
+
+# North America Youth NEET (%)
+
+
+```{r}
+north_america <- df %>%
+# subset North America and compute yearly average NEET for the continent
+  filter(Continent == "North America") %>%
+  group_by(Year) %>%
+  summarise(
+    mean_neet = mean(share_neet, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Plot North America's average NEET trend over 2000–2020
+ggplot(north_america, aes(x = Year, y = mean_neet)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.3) +
+  labs(
+    title = "North America: Youth NEET (%)",
+    x = "Year",
+    y = "% of youth NEET"
+  ) +
+  theme_minimal()
+```
+
+
+# South America Youth NEET (%)
+
+
+```{r}
+south_america <- df %>%
+# subset South America and compute yearly average NEET for the continent
+  filter(Continent == "South America") %>%
+  group_by(Year) %>%
+  summarise(
+    mean_neet = mean(share_neet, na.rm = TRUE),
+    .groups = "drop"
+  )
+
+# Plot South America's average NEET trend over 2000–2020
+ggplot(south_america, aes(x = Year, y = mean_neet)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 1.3) +
+  labs(
+    title = "South America: Youth NEET (%)",
+    x = "Year",
+    y = "% of youth NEET"
+  ) +
+  theme_minimal()
+```
+
+
+# Youth NEET by Continent heatmap
+
+
+```{r}
+
+# Selecting Relevant Columns
+
+
+continents <- continents %>% 
+  select("Entity", "Code", "Continent")
+
+
+# Joining Youth Data With Continent Classification
+
+
+all <- youth %>% 
+  left_join(continents, by = "Entity")
+
+
+# Removing Duplicate/Unnecessary Columns
+
+
+all <- all %>% 
+  select("Entity", "Code.x", "Year", "Continent",
+         "Share.of.youth.not.in.education..employment.or.training..total....of.youth.population.")
+
+
+# Removing Missing Values
+
+
+all <- all %>% na.omit()
+
+
+# Filtering Years 2000–2020
+
+
+all <- all %>% 
+  filter(Year >= 2000 & Year <= 2020)
+
+
+# Grouping by Continent and Year, Computing Averages
+
+
+by_continent <- all %>%
+  group_by(Continent, Year) %>%
+  summarise(continent_avg = mean(
+    Share.of.youth.not.in.education..employment.or.training..total....of.youth.population.
+  ))
+
+# Heatmap Plot
+
+
+by_continent %>% 
+  ggplot(aes(x = Year, y = Continent, fill = continent_avg)) +
+  geom_tile() +
+  scale_fill_gradient(low = "green", high = "red") +
+  labs(
+    title = "Youth Not in Employment, Training or Education (NEET) by Continent, 2000–2020",
+    fill = "Average NEET Share (%)"
+  ) +
+  theme(legend.position = "bottom")
+```
+
+
+
+# Youth Not in Education, Employment or Training by Year Chloropleth
+
+
+# Purpose: 
+Create world maps of youth NEET rates (2015–2020) for SDG 8.6
+
+# Inputs: 
+data/youth-not-in-education-employment-training.csv, data/continents-according-to-our-world-in-data.csv
+
+# Outputs: 
+PNG maps saved to analysis/figures/neet_map_<year>.png
+
+
+# Data Loading and Preparation
+
+```{r}
+library(tidyverse)
+library(sf)
+library(rnaturalearth)
+
+# File paths (relative to project root)
+neet_path <- "../data/youth-not-in-education-employment-training.csv"
+continents_path <- "../data/continents-according-to-our-world-in-data.csv"
+
+# Years to plot
+years_to_plot <- 2015:2020
+
+# Load and clean NEET data (long format already)
+neet_clean <- readr::read_csv(neet_path, show_col_types = FALSE) %>%
+  rename(
+    country = Entity,
+    code = Code,
+    year = Year,
+    neet_rate = `Share of youth not in education, employment or training, total (% of youth population)`
+  ) %>%
+  mutate(
+    year = as.numeric(year),
+    neet_rate = as.numeric(neet_rate)
+  ) %>%
+  select(country, code, year, neet_rate) %>%
+  drop_na(country)
+
+# Load continent lookup and keep one continent per country
+continents_clean <- readr::read_csv(continents_path, show_col_types = FALSE) %>%
+  rename(
+    country = Entity,
+    code = Code,
+    year = Year,
+    continent = Continent
+  ) %>%
+  mutate(
+    country = str_trim(country),
+    continent = str_trim(continent)
+  ) %>%
+  select(country, continent) %>%
+  distinct(country, .keep_all = TRUE) %>%
+  drop_na(continent)
+
+# Merge NEET data with continents
+neet_map_data <- neet_clean %>%
+  left_join(continents_clean, by = "country") %>%
+  filter(year %in% years_to_plot)
+
+# Country geometries
+world <- rnaturalearth::ne_countries(scale = "medium", returnclass = "sf") %>%
+  select(iso_a3, geometry)
+
+# Output directory
+out_dir <- "figures"
+dir.create(out_dir, showWarnings = FALSE)
+
+```
+
+
+# Plots
+
+
+```{r}
+plot_neet_map <- function(target_year) {
+  # Join NEET data to shapes for the target year
+  df_year <- world %>%
+    left_join(
+      neet_map_data %>% filter(year == target_year),
+      by = c("iso_a3" = "code")
+    )
+
+  # OWID-like beige-to-red palette
+  palette_colors <- c("#fef6e4", "#f9d9a9", "#f7a26d", "#e25b42", "#b2171e")
+  palette_values <- scales::rescale(c(0, 10, 25, 40, 60))
+
+  p <- ggplot(df_year) +
+    geom_sf(aes(fill = neet_rate), color = "grey80", size = 0.1) +
+    scale_fill_gradientn(
+      colours = palette_colors,
+      values = palette_values,
+      limits = c(0, 60),
+      oob = scales::squish,
+      na.value = "grey90",
+      name = "NEET (%)"
+    ) +
+    labs(
+      title = paste0("Youth Not in Education, Employment or Training (", target_year, ")"),
+      subtitle = "Share of youth population",
+      caption = "Source: ILO / World Bank NEET data"
+    ) +
+    theme_minimal() +
+    theme(
+      legend.position = "bottom",
+      plot.title = element_text(face = "bold")
+    )
+
+  out_file <- file.path(out_dir, paste0("neet_map_", target_year, ".png"))
+  ggsave(out_file, p, width = 12, height = 6, dpi = 300)
+  message("Saved: ", out_file)
+  print(p)
+}
+
+invisible(lapply(years_to_plot, plot_neet_map))
+```
