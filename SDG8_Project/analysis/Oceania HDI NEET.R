@@ -2,16 +2,13 @@ library(readr)
 library(dplyr)
 library(ggplot2)
 
-# 0.1 Load the merged dataset
-# Make sure this filename matches what you saved
+#Load merged dataset containing NEET rates, HDI values, and continent labels
 df <- read_csv("youth_continents_hdi_2000_2020.csv")
 
-# If your NEET column is not yet called 'share_neet', uncomment this:
-# df <- df %>%
-#   rename(share_neet = `Share of youth not in education, employment or training, total (% of youth population)`)
 
-# 0.2 Create HDI tiers and 2-group classification
 df <- df %>%
+  #Create HDI tiers and broader HDI groups for comparing NEET outcomes
+
   mutate(
     HDI_tier = case_when(
       HDI >= 0.800                    ~ "Very High",
@@ -26,7 +23,9 @@ df <- df %>%
       TRUE                                   ~ NA_character_
     )
   ) %>%
-  filter(!is.na(HDI_group2))   # drop rows without HDI classification
+  filter(!is.na(HDI_group2))   #remove rows without valid HDI grouping
+
+#Compute annual average NEET for Oceania by HDI group
 oceania <- df %>%
   filter(Continent == "Oceania") %>%
   group_by(Year, HDI_group2) %>%
@@ -35,6 +34,7 @@ oceania <- df %>%
     .groups = "drop"
   )
 
+#Plot NEET trends over time for Oceanic HDI groups
 ggplot(oceania, aes(x = Year, y = mean_neet, colour = HDI_group2)) +
   geom_line(linewidth = 1) +
   geom_point(size = 1.3) +
