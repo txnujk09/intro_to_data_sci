@@ -2,12 +2,10 @@ library(readr)
 library(dplyr)
 library(ggplot2)
 
-# Loading the merged dataset
+#Load merged dataset containing NEET rates, HDI values, and continent labels
 df <- read_csv("youth_continents_hdi_2000_2020.csv")
 
-#   rename(share_neet = `Share of youth not in education, employment or training, total (% of youth population)`)
-
-# Creating HDI tiers and 2-group classification
+ #Create HDI tiers and broader HDI groups for comparing NEET outcomes
 df <- df %>%
   mutate(
     HDI_tier = case_when(
@@ -23,7 +21,9 @@ df <- df %>%
       TRUE                                   ~ NA_character_
     )
   ) %>%
-  filter(!is.na(HDI_group2))   # drop rows without HDI classification
+  filter(!is.na(HDI_group2))   #remove rows without valid HDI grouping
+
+# Compute annual average NEET for North America by HDI group
 north_america <- df %>%
   filter(Continent == "North America") %>%
   group_by(Year, HDI_group2) %>%
@@ -32,6 +32,7 @@ north_america <- df %>%
     .groups = "drop"
   )
 
+# Plot NEET trends over time for North American HDI groups
 ggplot(north_america, aes(x = Year, y = mean_neet, colour = HDI_group2)) +
   geom_line(linewidth = 1) +
   geom_point(size = 1.3) +
