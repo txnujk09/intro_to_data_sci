@@ -5,9 +5,6 @@ library(ggplot2)
 # Load the merged dataset (NEET + continents + HDI)
 df <- readr::read_csv("youth_continents_hdi_2000_2020.csv")
 
-# If your NEET column is not already called 'share_neet', rename it:
-# df <- df %>%
-#   rename(share_neet = `Share of youth not in education, employment or training, total (% of youth population)`)
 africa <- df %>%
   filter(Continent == "Africa") %>%
   group_by(Year) %>%
